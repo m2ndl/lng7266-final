@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LNG 7266 — Final Exam Answers</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23161a1e'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-style='italic' font-size='20' fill='%23d48c71' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+<!-- restore theme before paint to avoid a flash -->
+<script>try{if(localStorage.getItem('lng7266_theme')==='light')document.documentElement.classList.add('light');}catch(e){}</script>
+<!-- fonts: progressive enhancement, degrade to system stacks offline -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Manrope:wght@400..800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+
+<div id="progress-stripe-track"><div id="progress-stripe"></div></div>
+
+<!-- mobile top bar -->
+<div id="topbar">
+  <button id="hamburger" aria-label="Menu">☰</button>
+  <span class="brand-m">LNG 7266 · Final</span>
+</div>
+
+<!-- sidebar -->
+<aside id="sidebar">
+  <div class="brand">
+    <h1>Final Exam Answers</h1>
+    <div class="course">LNG 7266 · Approaches &amp; Methods</div>
+    <div class="mode">Read Mode</div>
+  </div>
+  <div class="nav-label">Topics</div>
+  <nav id="topic-nav"></nav>
+  <div class="side-foot">
+    <button class="side-btn" id="btn-theme"><span class="ico">◐</span><span id="theme-label">Light mode</span></button>
+    <button class="side-btn" id="btn-print"><span class="ico">⎙</span>Print this topic</button>
+  </div>
+</aside>
+
+<div id="sidebar-overlay" class="hidden"></div>
+
+<!-- main -->
+<main id="main">
+
+  <div id="controls">
+    <div class="controls-inner">
+      <div class="ctl">
+        <span class="ico">⌕</span>
+        <input id="search-input" type="text" placeholder="Search all answers…" />
+        <button id="search-clear" class="hidden" aria-label="Clear">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="topic-view" class="wrap">
+    <header id="topic-header"></header>
+    <div id="topic-body"></div>
+  </div>
+
+  <div id="search-results" class="wrap hidden">
+    <div class="search-head"><h3>Results</h3></div>
+    <p id="search-count"></p>
+    <div id="search-results-list"></div>
+  </div>
+
+</main>
+
+<!-- data layer: store first, then content files, then renderer.
+     Add a topic by dropping a js/data/<topic>.js file and a <script> line here. -->
+<script src="js/store.js"></script>
+<script src="js/data/topics.js"></script>
+<script src="js/data/grammar.js"></script>
+<script src="js/data/vocabulary.js"></script>
+<script src="js/data/writing.js"></script>
+<script src="js/data/writing-mechanics.js"></script>
+<script src="js/data/reading.js"></script>
+<script src="js/data/speaking.js"></script>
+<script src="js/data/listening-academic.js"></script>
+<script src="js/data/listening-process.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
