@@ -154,7 +154,7 @@ EXAM.addQuestions([
     topicId: 'speaking',
     section: 'application',
     operator: 'design',
-    prompt: 'Contextual Application: Public Schools & Gender-Segregated Classrooms. In Saudi K-12 settings, female students are often reported to be more "reticent" and "shy" during oral activities. Drawing on the study by Zhang and Head (2009) mentioned in the chapter, propose an intervention to increase motivation and self-confidence in a 9th-grade girls\' classroom.',
+    prompt: 'Contextual Application: Public Schools & Gender-Segregated Classrooms. In Saudi K-12 settings, female students are often reported to be more "reticent" and "shy" during oral activities [27]. Drawing on the study by Zhang and Head (2009) mentioned in the chapter, propose an intervention to increase motivation and self-confidence in a 9th-grade girls\' classroom.',
     spine: ['Problem: reticence + shyness in oral activities (a known EFL challenge)', 'Zhang & Head (2009): involve students in designing the course + materials → ownership', 'their study: over a year → improved attitudes, motivation, self-confidence', 'Co-design topics + activities with the 9th-grade girls', 'Lower the threat: small groups for reticent students, clear roles, pre-taught functional language', 'Assess by participation + confidence, not error counts'],
     core: [
       { type: 'prose', html: '<strong>Problem + evidence.</strong> Reticence and shyness in oral activities are a known EFL challenge — simply getting students to speak, especially where classroom speaking norms are cautious. The study by <strong>Zhang and Head (2009)</strong> points to a student-centred remedy.' },
@@ -173,7 +173,7 @@ EXAM.addQuestions([
     topicId: 'speaking',
     section: 'application',
     operator: 'apply',
-    prompt: 'Research-Informed Pedagogy: Critical Evaluation of Materials for Saudi Private Institutes. Many language institutes in Saudi Arabia often rely on "scripted dialogues" that are free of "speaker errors" and "hesitation markers". Critique this practice using the "Authenticity" construct and propose a model for incorporating "corpus-based" materials for adult learners.',
+    prompt: 'Research-Informed Pedagogy: Critical Evaluation of Materials for Saudi Private Institutes. Many language institutes in Saudi Arabia often rely on "scripted dialogues" that are free of "speaker errors" and "hesitation markers" [37]. Critique this practice using the "Authenticity" construct and propose a model for incorporating "corpus-based" materials for adult learners.',
     spine: ['Critique via Authenticity: scripted dialogues are idealised, not real talk', 'free of speaker errors + hesitation/discourse markers; an unspecified native variety', 'Adults with real-world experience do not benefit from artificial material', 'Risk: learners never meet real SGE → avoid structures or transfer L1 forms', 'Propose corpus-based materials grounded in real spoken language', 'Simplify the task, not the text'],
     core: [
       { type: 'prose', html: '<strong>Critique.</strong> Through the <strong>authenticity</strong> construct, scripted dialogues fail on both of its senses: they are not authentic in content — they are idealised, free of speaker errors, hesitation markers, and discourse markers, and represent some unspecified native-speaker variety — and they give no room for the learner’s authentic voice. Adults who already have real-world experience do not benefit from such artificially created material.' },

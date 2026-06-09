@@ -126,7 +126,7 @@ EXAM.addQuestions([
     topicId: 'writing-mechanics',
     section: 'application',
     operator: 'design',
-    prompt: 'Contextual Application: K-12 Elementary Schools in Saudi Arabia. Saudi students transitioning from Arabic to English must adapt to a "different writing system" and a new direction of script. Design a "Meaningful Copying" task for 3rd-grade students that helps them master the English "left-to-right" orientation while reinforcing "Sound-Spelling Correspondences."',
+    prompt: 'Contextual Application: K-12 Elementary Schools in Saudi Arabia. Saudi students transitioning from Arabic to English must adapt to a "different writing system" and a new direction of script [2]. Design a "Meaningful Copying" task for 3rd-grade students that helps them master the English "left-to-right" orientation while reinforcing "Sound-Spelling Correspondences."',
     spine: ['Problem: Arabic L1 runs right-to-left → must master English left-to-right', 'Use MEANINGFUL copying (with a purpose), not bare tracing', 'Picture + sentence bank: copy the matching sentence under each picture', 'Choose sentences loaded with target sound-spelling patterns (CVC/CVCe, "a" in "ball")', 'Scaffold direction: start-dot, left-to-right arrows, numbered word order', 'Assess legible left-to-right copies with correct spelling patterns'],
     core: [
       { type: 'prose', html: '<strong>Problem + evidence.</strong> Third-graders moving from Arabic must adapt to a different script and, crucially, to the opposite <strong>direction</strong>, because English runs left-to-right. A meaningful copying task can drill that orientation while reinforcing sound-spelling correspondences, so the directional practice is never empty.' },
@@ -145,7 +145,7 @@ EXAM.addQuestions([
     topicId: 'writing-mechanics',
     section: 'application',
     operator: 'apply',
-    prompt: 'Research-Informed Pedagogy: Fast-Tracking Adult Learners in Saudi IEPs. Adult learners in Saudi Intensive English Programs (IEPs) are often "familiar with the Roman alphabet" but lack writing fluency. Critique the use of "tracing" for these learners and propose an alternative using the "Meaningful Copying" model.',
+    prompt: 'Research-Informed Pedagogy: Fast-Tracking Adult Learners in Saudi IEPs. Adult learners in Saudi Intensive English Programs (IEPs) are often "familiar with the Roman alphabet" but lack writing fluency [2]. Critique the use of "tracing" for these learners and propose an alternative using the "Meaningful Copying" model.',
     spine: ['Chapter: tracing is ONLY for learners from a different writing system', 'These adults already know the Roman alphabet → tracing is redundant + infantilising', 'Their real gap is writing FLUENCY, which tracing does not build', 'Start instead at MEANINGFUL copying (purposeful)', 'Move quickly to practical writing tasks (lists, notes, forms, messages) — authentic for adults', 'Assess fluency on real tasks, not letter shapes'],
     core: [
       { type: 'prose', html: '<strong>Critique.</strong> The chapter is explicit that the tracing stage “is needed only for learners who come from a different writing system; students familiar with the Roman alphabet can move right to writing meaningful words.” Saudi adults in an IEP already know the Roman alphabet, so tracing rehearses a skill they have: it wastes scarce IEP time, can feel infantilising, and does nothing for their real gap, which is <strong>writing fluency</strong>.' },

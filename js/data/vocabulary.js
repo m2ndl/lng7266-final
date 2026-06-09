@@ -38,7 +38,7 @@ EXAM.addQuestions([
     id: 'vc-d2',
     topicId: 'vocabulary',
     section: 'define',
-    term: 'Keyword Technique  (orphan — not defined in Ch 19)',
+    term: 'Keyword Technique',
     prompt: 'Keyword Technique:',
     spine: ['GUIDE ANOMALY: not defined in Ch 19 (Zimmerman)', 'A mnemonic word-learning strategy (Nation’s strategy literature)', '1 L1 "keyword" that SOUNDS like part of the L2 word', '2 vivid mental IMAGE linking keyword + meaning', 'e.g. Spanish "mesa" → "mess" → image of a messy table'],
     core: [

@@ -45,7 +45,7 @@ EXAM.addQuestions([
     id: 'gr-d3',
     topicId: 'grammar',
     section: 'define',
-    term: 'Grammaticalization  (orphan — not defined in Ch 17)',
+    term: 'Grammaticalization',
     prompt: 'Grammaticalization:',
     spine: ['GUIDE ANOMALY: term not defined in Ch 17', 'Best read for a teaching chapter = the LEARNER process', 'how an interlanguage gradually acquires grammatical form', 'fits chapter: grammar "emerges from use" → "sedimented" patterns', 'Linguistics aside: lexical item → grammatical marker (going to → gonna)'],
     core: [

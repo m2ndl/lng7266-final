@@ -46,8 +46,8 @@ EXAM.addQuestions([
     id: 'lp-d3',
     topicId: 'listening-process',
     section: 'define',
-    term: 'Listening Skills  (3rd term — guide left blank)',
-    prompt: '•   (the guide’s third Define bullet is blank)',
+    term: 'Listening Skills',
+    prompt: 'Listening Skills:',
     spine: ['GUIDE ANOMALY: 3rd bullet blank', 'Best fit: Listening Skills (pairs w/ Short Note 2)', 'Acquired · automatic · effortless', 'Fallback term: Metacognition'],
     core: [
       { type: 'flag', html: '<strong>Guide anomaly.</strong> The third “Define” bullet for this chapter is <em>blank</em> — preserved here, not invented. The best-supported candidate is <strong>Listening Skills</strong> (it pairs with Short Note 2); the fallback is <strong>Metacognition</strong>. Both are defined so you are covered.' },
