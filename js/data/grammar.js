@@ -67,7 +67,7 @@ EXAM.addQuestions([
     prompt: 'Identify and describe the three dimensions of grammar instruction as proposed by Larsen-Freeman (2002).',
     spine: ['Larsen-Freeman: the pie-chart framework', '1 FORM — How is it formed? (morphosyntax, patterns, sound/spelling)', '2 MEANING — What does it mean? (lexical or grammatical)', '3 USE — When/Why is it used? (pragmatics: social + discourse context)', 'Permeable boundaries → identify the learning challenge'],
     core: [
-      { type: 'prose', html: 'Larsen-Freeman represents grammar as a <strong>pie chart</strong> with three interacting dimensions. Any construction can be described by all three, and a teacher begins by asking the question posed in each slice.' },
+      { type: 'prose', html: 'Larsen-Freeman represents grammar as a <strong>pie chart</strong> with three interacting dimensions, each occupying one <strong>wedge</strong> (her term for a slice of the pie). Any construction can be described by all three, and a teacher begins by asking the question posed in each wedge.' },
       { type: 'steps', items: [
         { step: '<strong>Form</strong> — “How is it formed?” The overt morphosyntactic and lexicogrammatical patterns: word structure and sequence, and where relevant the sound (phonemic) and spelling (graphemic) patterns.', why: 'This is the visible shape of the construction.' },
         { step: '<strong>Meaning</strong> — “What does it mean?” The meaning can be <em>lexical</em> (a dictionary sense) or <em>grammatical</em> (e.g. the conditional signals a condition and its result).', why: 'This is what the construction signifies.' },
@@ -75,7 +75,7 @@ EXAM.addQuestions([
       ] },
       { type: 'caveat', html: 'The boundaries are <strong>permeable</strong> (bidirectional arrows), so the dimensions interact. The payoff is diagnostic: the teacher identifies <em>which</em> dimension is the learning challenge for a given group and targets practice there — form is not always the hardest part (for phrasal verbs, <em>meaning</em> is).' },
     ],
-    expansion: ['Mapping a construction across the three slices reveals its scope and guides what to teach and when. The same chart also diagnoses errors — confusion often lies in <em>use</em>, not form.'],
+    expansion: ['Mapping a construction across the three wedges reveals its scope and guides what to teach and when. The same chart also diagnoses errors — confusion often lies in <em>use</em>, not form.'],
     citation: { chapter: 'Ch 17', page: 'pp. 257–259' },
     support: 'supported', discrepancy: null,
   },
@@ -145,7 +145,7 @@ EXAM.addQuestions([
     prompt: 'Contextual Application: Overcoming "The Rule of Three" in Saudi K-12 Schools. In many Saudi public schools, grammar is taught through a "deductive" approach (teacher gives rule, students do exercises). Using Larsen-Freeman\'s Three Dimensions, design an "inductive" intervention for teaching the "Present Perfect" to 11th-grade students that moves beyond simple "Form" (have/has + V3).',
     spine: ['Problem: deductive PPP teaches only FORM (have/has + V3)', 'Reframe across 3 dimensions; teach inductively (CR)', 'MEANING: induce "past-with-present-relevance" from sentence pairs + timelines', 'USE: role-play contexts forcing present-perfect vs simple-past choice', 'FORM: "Find someone who has…" mingle → meaningful iteration', 'Assess by a communicative task, not a gap-fill'],
     core: [
-      { type: 'prose', html: '<strong>Problem + evidence.</strong> The deductive “state the rule, then do the exercises” routine — here, “have/has + V3” — is the <em>“Rule of Three”</em> the prompt targets: it teaches only the <strong>Form</strong> slice, so learners can <em>conjugate</em> the present perfect but cannot <em>choose</em> it. Larsen-Freeman’s three dimensions show the real challenge lies in <strong>Meaning</strong> and <strong>Use</strong>, and an <strong>inductive</strong> (consciousness-raising) design targets them.' },
+      { type: 'prose', html: '<strong>Problem + evidence.</strong> The deductive “state the rule, then do the exercises” routine — here, “have/has + V3” — is the <em>“Rule of Three”</em> the prompt targets: it teaches only the <strong>Form</strong> wedge, so learners can <em>conjugate</em> the present perfect but cannot <em>choose</em> it. Larsen-Freeman’s three dimensions show the real challenge lies in <strong>Meaning</strong> and <strong>Use</strong>, and an <strong>inductive</strong> (consciousness-raising) design targets them.' },
       { type: 'steps', items: [
         { step: '<strong>Meaning (inductive).</strong> Give 11th-graders matched pairs in context — “I have lived in Riyadh for ten years” vs “I lived in Riyadh for ten years” — with simple timelines. In pairs they induce the difference: the present perfect links the past to <em>now</em> (still true / present result).', why: 'Learners derive the meaning themselves instead of receiving a rule.' },
         { step: '<strong>Use (role play).</strong> Set contexts that force a choice between present perfect and simple past — a news flash, or “Have you ever…?” experience-sharing. Students notice <em>why</em> the present perfect is selected (relevance now, unspecified time).', why: 'This targets the pragmatic Use dimension that the drill ignored.' },
