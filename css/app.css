@@ -321,7 +321,7 @@ ul.exp li { font-size: 13.5px; line-height: 1.55; color: var(--muted); }
   #hamburger { background: none; border: 0; color: var(--text); font-size: 22px; cursor: pointer; }
   #sidebar-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 45; }
   .blk-distinction { grid-template-columns: 1fr; }
-  #controls { top: 6px; }
+  #controls { top: 62px; }   /* clear the 56px sticky top bar so search stays visible */
 }
 
 /* ── print: clean revision sheet ─────────────────────────────── */

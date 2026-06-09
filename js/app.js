@@ -33,10 +33,14 @@ function escapeHtml(s) {
 }
 function highlight(html, term) {
   if (!term) return html;
-  // Highlight only in text nodes, never inside tags.
+  // Highlight only in text nodes (between tags), and never split an HTML
+  // entity (e.g. &amp; / &#39;) — marking inside one renders it as broken text.
   const re = new RegExp('(' + term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
-  return html.replace(/>([^<]+)</g, (m, txt) =>
-    '>' + txt.replace(re, '<mark>$1</mark>') + '<');
+  const mark = txt => txt
+    .split(/(&[a-zA-Z]+;|&#\d+;|&#x[0-9a-fA-F]+;)/)
+    .map((seg, i) => i % 2 ? seg : seg.replace(re, '<mark>$1</mark>'))
+    .join('');
+  return html.replace(/>([^<]+)</g, (m, txt) => '>' + mark(txt) + '<');
 }
 
 /* ── init ────────────────────────────────────────────────────── */
@@ -231,7 +235,7 @@ function renderSearch() {
   const list = el('search-results-list');
   list.innerHTML = '';
   if (!hits.length) {
-    list.innerHTML = `<p class="placeholder-src">No matches. Note: only the Listening — Process pilot is populated so far.</p>`;
+    list.innerHTML = `<p class="placeholder-src">No answers match that search. Try another term.</p>`;
     return;
   }
   hits.forEach(q => {
