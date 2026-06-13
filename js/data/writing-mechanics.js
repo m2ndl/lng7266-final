@@ -21,7 +21,13 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Letter Recognition Activities',
     prompt: 'Letter Recognition Activities:',
-    spine: ['A form of "matching task" (1 of the 3 recognition-task types)', 'Goal: fast, accurate recognition of English letters', 'Distinguish a letter from similar ones; match upper/lower case; find a letter in a group', 'Recognition only — no writing, no pronouncing', 'Especially for learners from a non-Roman script'],
+    spine: { shape: 'map', center: 'Letter recognition activities', payoff: 'Recognition only: the learner neither writes nor pronounces the letters.',
+      spokes: [
+        { label: 'Task type', text: 'A form of matching task, one of the three recognition-task types' },
+        { label: 'Goal', text: 'Quick, accurate recognition of the English letters' },
+        { label: 'What learners do', text: 'Tell a letter from similar ones, match upper and lower case, find a letter in a group' },
+        { label: 'Who needs it most', text: 'Students whose first language uses a non-Roman script' },
+      ] },
     core: [
       { type: 'def', html: '<strong>Letter recognition activities</strong> are early drills whose goal is the <strong>quick, accurate recognition of English letters</strong>. They are a form of the “matching task,” one of the three recognition-task types.' },
       { type: 'prose', html: 'In these activities learners distinguish a target letter from visually similar ones (for example, finding the “odd man out” or matching upper- and lower-case forms) and search for a particular letter within a group. The tasks require recognition only, so the learner neither writes nor pronounces the letters. They matter most for students whose first language uses a non-Roman script.' },
@@ -35,7 +41,13 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Meaningful Copying Activities',
     prompt: 'Meaningful Copying Activities:',
-    spine: ['Copying that carries meaning / a communicative purpose', 'e.g. copy the sentence that matches a picture; answer with a supplied sentence', 'Contrasts with mechanical tracing (shapes only)', 'Practises whole words + sentences while building writing fluency', 'Bridges the mechanics of writing → personal, communicative writing'],
+    spine: { shape: 'map', center: 'Meaningful copying activities', payoff: 'Bridges the bare mechanics of writing and later personal, communicative writing.',
+      spokes: [
+        { label: 'What it is', text: 'Copying that carries a communicative purpose, not just letter shapes' },
+        { label: 'Examples', text: 'Copy the sentence that matches a picture, or answer with a supplied sentence' },
+        { label: 'Versus mechanical', text: 'Unlike tracing, which reproduces shapes with no meaning' },
+        { label: 'What it builds', text: 'Practises whole words and sentences while building writing fluency' },
+      ] },
     core: [
       { type: 'def', html: '<strong>Meaningful copying activities</strong> are copying tasks that carry a <strong>communicative purpose</strong> rather than simply reproducing letter shapes. The learner copies language that means something — for example, copying the sentence that matches a picture, or answering a question with the correct supplied sentence.' },
       { type: 'prose', html: 'Although copying can look “terribly mechanical,” it lets students practise whole words and sentences while gaining fluency in writing, and it ties written form to meaning. It is the step that bridges the bare mechanics of writing and later personal, communicative writing.' },
@@ -51,7 +63,14 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'identify',
     prompt: 'Identify and describe the primary objectives of "Writing tasks" for learners who are transitioning from a different writing system.',
-    spine: ['"Writing tasks" = produce the SHAPES of letters (recognition + production)', 'Begin with tracing → focus on the detailed characteristics of each letter', 'This stage is ONLY for learners from a different writing system', 'Roman-alphabet learners skip it and write meaningful words directly', 'Also: master left-to-right orientation; support reading'],
+    spine: { shape: 'flow', layout: 'stack',
+      nodes: [
+        'The aim is to produce the shapes of the letters, as both recognition and production',
+        'Begin with tracing printed letters to focus on the detailed features of each shape',
+        'Establish the English left-to-right, horizontal orientation',
+        'Support reading, since writing sharpens how learners discriminate the letters',
+      ],
+      note: 'This tracing stage is only for learners from a different writing system; Roman-alphabet learners go straight to writing meaningful words.' },
     core: [
       { type: 'prose', html: 'The primary objective of writing tasks at this stage is to let students <strong>produce the shapes of the letters</strong>, as both a recognition and a production task. For learners transitioning from a different writing system this is a genuine learning step, not a formality.' },
       { type: 'steps', items: [
@@ -70,7 +89,14 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'explain',
     prompt: 'Explain the pedagogical purpose of "Sound-spelling correspondence tasks" in early literacy.',
-    spine: ['English is NOT one-to-one letter↔sound; it has systematic sound-spelling correspondences', 'Task goal: match sounds (and words) to their written form', 'Teach generalisations, e.g. CVC (short vowel) vs CVCe (long vowel)', 'Integrate all four skills + pronunciation', 'Build the foundation for reading and writing'],
+    spine: { shape: 'flow', layout: 'stack',
+      nodes: [
+        'English is not one-to-one letter to sound, but a systematic set of sound-spelling correspondences underlies it',
+        'Match heard sounds and words to their written forms',
+        'Teach useful generalisations, such as CVC short vowel ("pin") versus CVCe long vowel ("pine")',
+        'Integrate all four skills and pronunciation, since learners listen, read, write, and say the forms',
+      ],
+      note: 'Mastering these correspondences gives beginners the dependable foundation for fluent reading and writing.' },
     core: [
       { type: 'prose', html: 'English orthography is <strong>not a one-to-one letter-to-sound system</strong>, but it is far more rule-governed than learners assume: a systematic set of <strong>sound-spelling correspondences</strong> underlies it. The purpose of these tasks is to build the learner’s command of that system.' },
       { type: 'steps', items: [
@@ -89,7 +115,10 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'compare',
     prompt: 'Compare and contrast "Mechanical Copying" (tracing) and "Meaningful Copying Activities."',
-    spine: ['Mechanical (tracing) = reproduce letter SHAPES; no meaning', 'only for learners from a different writing system; can be skipped', 'Meaningful = copy language that carries a PURPOSE (sentence ↔ picture)', 'practises words + sentences, builds writing fluency, links form ↔ meaning', 'A sequence: tracing → meaningful copying → personal writing'],
+    spine: { shape: 'contrast', rel: 'vs',
+      a: { label: 'Mechanical copying (tracing)', text: 'Trace letters and words to reproduce their shapes, with no communicative meaning; needed only for non-Roman-script learners and otherwise skippable' },
+      b: { label: 'Meaningful copying', text: 'Copy language that carries a purpose, such as the sentence that matches a picture, tying written form to meaning' },
+      bridge: 'Not rivals but a sequence: tracing secures the shapes where needed, then meaningful copying builds writing fluency on the way to personal writing.' },
     core: [
       { type: 'distinction',
         left:  { label: 'MECHANICAL COPYING (TRACING)', html: 'The learner traces letters, words, and sentences printed on the page to reproduce their <strong>shapes</strong>. The focus is purely on the form of the script, with no communicative meaning. Only learners coming from a non-Roman script need it; those who already read Roman letters can skip it.' },
@@ -106,7 +135,18 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'synthesize',
     prompt: 'Synthesize how early writing tasks (tracing, matching, and copying) interact to develop "Language Knowledge."',
-    spine: ['Three recognition-task types: matching, writing (tracing), meaningful copying', 'Matching → recognise letters; Tracing → produce shapes; Copying → form + meaning + fluency', 'All rehearse the sound-spelling correspondences across the four skills', 'Writing and reading develop together at this stage', '"Language knowledge" gained = the basis for later communicative writing'],
+    spine: { shape: 'flow', layout: 'stack',
+      nodes: [
+        { rank: [
+          'Matching tasks build recognition of the letters',
+          'Tracing tasks add the production of letter shapes',
+          'Meaningful copying joins form to meaning while building fluency',
+        ] },
+        'All three share one engine: they rehearse the sound-spelling correspondences across the four skills',
+        'Writing and reading develop together, since forming the letters sharpens reading them',
+        'They accumulate into the language knowledge that underpins later communicative writing',
+      ],
+      note: 'Not isolated drills: matching, tracing, and copying feed one another and converge on the same knowledge.' },
     core: [
       { type: 'prose', html: 'The three early task types work as one progression. <strong>Matching</strong> tasks build letter recognition; <strong>writing (tracing)</strong> tasks add the production of letter shapes; and <strong>meaningful copying</strong> joins form to meaning while building fluency. Together they develop the <strong>language knowledge</strong> on which later writing rests.' },
       { type: 'steps', items: [
@@ -127,7 +167,15 @@ EXAM.addQuestions([
     section: 'application',
     operator: 'design',
     prompt: 'Contextual Application: K-12 Elementary Schools in Saudi Arabia. Saudi students transitioning from Arabic to English must adapt to a "different writing system" and a new direction of script [2]. Design a "Meaningful Copying" task for 3rd-grade students that helps them master the English "left-to-right" orientation while reinforcing "Sound-Spelling Correspondences."',
-    spine: ['Problem: Arabic L1 runs right-to-left → must master English left-to-right', 'Use MEANINGFUL copying (with a purpose), not bare tracing', 'Picture + sentence bank: copy the matching sentence under each picture', 'Choose sentences loaded with target sound-spelling patterns (CVC/CVCe, "a" in "ball")', 'Scaffold direction: start-dot, left-to-right arrows, numbered word order', 'Assess legible left-to-right copies with correct spelling patterns'],
+    spine: { shape: 'flow', layout: 'stack', start: 'problem', end: 'outcome',
+      nodes: [
+        'Third-graders moving from Arabic must adapt to the opposite direction, since English runs left-to-right',
+        'Use meaningful copying with a purpose, not bare tracing, so the directional practice is never empty',
+        'Set a picture-and-sentence bank: the child copies the matching sentence beneath each picture, left to right',
+        'Load the sentences with target sound-spelling patterns, such as CVC versus CVCe ("cat / cake") and "a" in "ball"',
+        'Scaffold the direction with a left start-dot, faint left-to-right arrows, and numbered word order, then fade them',
+        'Assess legible, correctly oriented copies whose spelling reflects the target patterns, then move to a short weather-writing task',
+      ] },
     core: [
       { type: 'prose', html: '<strong>Problem + evidence.</strong> Third-graders moving from Arabic must adapt to a different script and, crucially, to the opposite <strong>direction</strong>, because English runs left-to-right. A meaningful copying task can drill that orientation while reinforcing sound-spelling correspondences, so the directional practice is never empty.' },
       { type: 'steps', items: [
@@ -146,7 +194,15 @@ EXAM.addQuestions([
     section: 'application',
     operator: 'apply',
     prompt: 'Research-Informed Pedagogy: Fast-Tracking Adult Learners in Saudi IEPs. Adult learners in Saudi Intensive English Programs (IEPs) are often "familiar with the Roman alphabet" but lack writing fluency [2]. Critique the use of "tracing" for these learners and propose an alternative using the "Meaningful Copying" model.',
-    spine: ['Chapter: tracing is ONLY for learners from a different writing system', 'These adults already know the Roman alphabet → tracing is redundant + infantilising', 'Their real gap is writing FLUENCY, which tracing does not build', 'Start instead at MEANINGFUL copying (purposeful)', 'Move quickly to practical writing tasks (lists, notes, forms, messages) — authentic for adults', 'Assess fluency on real tasks, not letter shapes'],
+    spine: { shape: 'flow', layout: 'stack', start: 'problem', end: 'outcome',
+      nodes: [
+        'The chapter reserves tracing for learners from a different writing system, yet these adults already know the Roman alphabet',
+        'For them tracing is redundant and infantilising, and it does nothing for their real gap, which is writing fluency',
+        'Skip tracing and start at meaningful copying: picture-and-sentence matching and supplied-sentence tasks',
+        'Move quickly to practical writing tasks (lists, notes, messages, forms) that are authentic and adult-appropriate',
+        'Use the keyboard and real channels, having learners type and exchange their lists and messages by email or text',
+        'Assess writing fluency on purposeful, real tasks, by how much they produce legibly and on task, not by neat letters',
+      ] },
     core: [
       { type: 'prose', html: '<strong>Critique.</strong> The chapter is explicit that the tracing stage “is needed only for learners who come from a different writing system; students familiar with the Roman alphabet can move right to writing meaningful words.” Saudi adults in an IEP already know the Roman alphabet, so tracing rehearses a skill they have: it wastes scarce IEP time, can feel infantilising, and does nothing for their real gap, which is <strong>writing fluency</strong>.' },
       { type: 'steps', items: [

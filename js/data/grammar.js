@@ -17,7 +17,12 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Grammaring',
     prompt: 'Grammaring:',
-    spine: ['Grammar as a SKILL, not a static rule-set', 'grammar + "-ing" = dynamic "grammar-using"', '= use constructions accurately + meaningfully + appropriately', 'Solves the "inert knowledge problem"', 'Larsen-Freeman (2003)'],
+    spine: { shape: 'map', center: 'Grammaring (Larsen-Freeman, 2003)', payoff: 'It treats grammar as a skill to be used, which solves the inert knowledge problem where learners know rules but never apply them.',
+      spokes: [
+        { label: 'A skill, not a rule-set', text: 'adding "-ing" reframes grammar as dynamic grammar-using rather than a static body of rules' },
+        { label: 'The threefold criterion', text: 'using grammatical constructions accurately, meaningfully, and appropriately' },
+        { label: 'How it is learned', text: 'meaningful practice under psychologically authentic conditions that match the conditions of use' },
+      ] },
     core: [
       { type: 'def', html: '<strong>Grammaring</strong> is the ability to use grammatical constructions <strong>accurately, meaningfully, and appropriately</strong>. Adding “-ing” to <em>grammar</em> reframes it as a dynamic process of grammar-<em>using</em>, not a static body of rules.' },
       { type: 'prose', html: 'Larsen-Freeman proposes grammaring as the proper goal of grammar instruction. It addresses the <strong>“inert knowledge problem”</strong> — students know the rules but do not apply them when communicating. To <em>grammar</em>, learners must practise meaningful use under “psychologically authentic” conditions, where the conditions of learning match the conditions of use — not merely notice or transform forms.' },
@@ -32,7 +37,13 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Consciousness-Raising (CR)',
     prompt: 'Consciousness-Raising (CR):',
-    spine: ['Explicit + INDUCTIVE rule instruction', 'Students induce the rule from given data', 'Teacher supplies examples; learners generalize', 'Best for difficult, not-clear-cut rules', 'Fotos & Ellis (1991): indirect-object alternation'],
+    spine: { shape: 'map', center: 'Consciousness-raising (CR) task', payoff: 'It raises awareness and primes noticing without demanding immediate production.',
+      spokes: [
+        { label: 'Explicit but inductive', text: 'the students induce the grammatical generalization from the language data they are given' },
+        { label: 'How it runs', text: 'learners examine where a pattern does and does not work, then work the rule out themselves' },
+        { label: 'When it fits best', text: 'constructions that are difficult or not clear-cut, in Ellis\'s account' },
+        { label: 'Worked example', text: 'Fotos and Ellis (1991) had learners derive the indirect-object alternation rule' },
+      ] },
     core: [
       { type: 'def', html: 'A <strong>consciousness-raising (CR) task</strong> is an explicit grammar activity in which it is the <strong>students’ job to induce a grammatical generalization</strong> from the language data they are given.' },
       { type: 'prose', html: 'It is <strong>inductive</strong>: rather than receiving a rule and applying it, learners examine examples — where a pattern does and does not work — and work the rule out themselves. Ellis treats this as ideal for constructions that are <strong>difficult or not clear-cut</strong>; Fotos and Ellis (1991) had learners derive the rule for indirect-object alternation (<em>They gave a watch to him / They gave him a watch</em>). CR raises awareness and primes noticing without demanding immediate production.' },
@@ -47,7 +58,12 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Grammaticalization',
     prompt: 'Grammaticalization:',
-    spine: ['GUIDE ANOMALY: term not defined in Ch 17', 'Best read for a teaching chapter = the LEARNER process', 'how an interlanguage gradually acquires grammatical form', 'fits chapter: grammar "emerges from use" → "sedimented" patterns', 'Linguistics aside: lexical item → grammatical marker (going to → gonna)'],
+    spine: { shape: 'list', items: [
+      'In the developmental sense, grammaticalization is the process by which a learner\'s interlanguage gradually acquires grammatical form.',
+      'Meaning-driven output becomes progressively more structured and accurate as the learner\'s system restructures over time.',
+      'This rests on the usage-based claim that grammar is dynamic and emerges from use: repeated lexicogrammatical sequences become sedimented as fixed or semi-fixed patterns.',
+      'In general linguistics the same term also names the diachronic process by which a lexical item becomes a grammatical marker, as in going to becoming the future gonna.',
+    ] },
     core: [
       { type: 'flag', html: '<strong>Term not defined in the assigned chapter.</strong> “Grammaticalization” does not appear in Larsen-Freeman’s Ch 17, so the term identity is inferred. Because this is a <em>teaching</em> chapter in Larsen-Freeman’s list, the likely intended sense is the <strong>learner-developmental</strong> one (below), with the general-linguistics sense as a secondary note.' },
       { type: 'def', html: '<strong>Grammaticalization</strong> (developmental sense) is the process by which a learner’s <strong>interlanguage gradually acquires grammatical form</strong>: meaning-driven output becomes progressively more structured and accurate as the learner’s system restructures over time.' },
@@ -65,7 +81,12 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'identify',
     prompt: 'Identify and describe the three dimensions of grammar instruction as proposed by Larsen-Freeman (2002).',
-    spine: ['Larsen-Freeman: the pie-chart framework', '1 FORM — How is it formed? (morphosyntax, patterns, sound/spelling)', '2 MEANING — What does it mean? (lexical or grammatical)', '3 USE — When/Why is it used? (pragmatics: social + discourse context)', 'Permeable boundaries → identify the learning challenge'],
+    spine: { shape: 'map', center: 'Larsen-Freeman pie chart of grammar', payoff: 'The wedges have permeable boundaries and interact, so the teacher identifies which dimension is the learning challenge and targets practice there.',
+      spokes: [
+        { label: 'Form', text: 'how it is formed: the morphosyntactic patterns, with sound and spelling where relevant' },
+        { label: 'Meaning', text: 'what it means, whether the sense is lexical or grammatical' },
+        { label: 'Use', text: 'when and why a speaker chooses it: the social context and discourse co-text' },
+      ] },
     core: [
       { type: 'prose', html: 'Larsen-Freeman represents grammar as a <strong>pie chart</strong> with three interacting dimensions, each occupying one <strong>wedge</strong> (her term for a slice of the pie). Any construction can be described by all three, and a teacher begins by asking the question posed in each wedge.' },
       { type: 'steps', items: [
@@ -85,7 +106,15 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'justify',
     prompt: 'Justify the teaching of grammar as a "skill" (grammaring) rather than a "set of rules."',
-    spine: ['Rules ≠ ability to use them: the "inert knowledge problem"', 'Grammar is a DYNAMIC system, not static rules', 'Mechanical drills don’t transfer to real communication', 'Output → hypothesis-testing + feedback (transfer-appropriate practice)', 'Goal = grammaring: accurate + meaningful + appropriate use'],
+    spine: { shape: 'flow', layout: 'stack',
+      nodes: [
+        'Teaching rules alone yields the inert knowledge problem: learners know the rule but do not deploy it when communicating',
+        'Larsen-Freeman holds that grammar is a dynamic system, so the goal is grammaring rather than a static rule-set',
+        'A skill must be practised in use under psychologically authentic conditions where learning matches use',
+        'Producing output pushes learners to test hypotheses and get feedback, building a usable system',
+        'The payoff is grammaring: using constructions accurately, meaningfully, and appropriately',
+      ],
+      note: 'This does not abolish rules; giving a rule is one legitimate way to teach form, but a course that stops at rules leaves learners ill-served.' },
     core: [
       { type: 'prose', html: 'Teaching grammar as a fixed <strong>set of rules</strong> produces the <strong>“inert knowledge problem”</strong>: students know the rule but do not deploy it when communicating. Larsen-Freeman argues grammar is a <strong>dynamic system</strong>, so the goal should be <em>grammaring</em> — the skill of using constructions accurately, meaningfully, and appropriately.' },
       { type: 'steps', items: [
@@ -104,7 +133,10 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'compare',
     prompt: 'Compare the "Rule-governed" and "Reason-governed" aspects of grammar as discussed by Larsen-Freeman.',
-    spine: ['Rule-governed = arbitrary, form-based, rote burden', 'gives learners security but stays shallow', 'Reason-governed = meaning/use-based logic', 'broader scope, deeper understanding, learners "own" it', 'e.g. existential "there" + "a" both mark NEW information'],
+    spine: { shape: 'contrast', rel: 'vs',
+      a: { label: 'Rule-governed', text: 'form-based rules to memorize that often seem arbitrary and add a rote burden, though they give some security' },
+      b: { label: 'Reason-governed', text: 'meaning- and use-based logic of broader scope that gives deeper understanding so learners make it their own' },
+      bridge: 'The point is to teach reasons, not only rules: for existential there, the reason is that both there and the indefinite a mark new information, explaining a range of word-order phenomena.' },
     core: [
       { type: 'distinction',
         left:  { label: 'RULE-GOVERNED', html: 'Grammar is presented as <strong>rules to memorize and apply</strong>. Many such rules <em>appear arbitrary</em> because they are form-based, ignoring the meaning and use dimensions. They add a <strong>rote-learning burden</strong>, though they do give learners some security.' },
@@ -122,7 +154,17 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'synthesize',
     prompt: 'Synthesize how "Input Processing" and "Noticing" contribute to the development of a learner\'s interlanguage.',
-    spine: ['Interlanguage = learner’s evolving L2 system', 'Attention is limited → form gets missed in communication', 'NOTICING: focus-on-form makes constructions salient (enhancement, flooding)', 'INPUT PROCESSING: tasks push attention to form during meaningful use; target L1–L2 differences', '"Notice the gap" → revise hypotheses → system restructures'],
+    spine: { shape: 'flow', layout: 'stack',
+      lead: 'The interlanguage is the learner\'s developing L2 system, which advances by restructuring',
+      nodes: [
+        'Attention is limited, so constructions slip past learners who are busy communicating',
+        { rank: [
+          'Noticing: input enhancement and input flooding make a construction salient enough to register',
+          'Input processing: tasks push attention to form while processing meaning, targeting L1 to L2 differences',
+        ] },
+        'Restructuring: learners notice the gap with the target, revise their hypotheses, and the system reorganizes',
+      ],
+      note: 'Both work by managing attention rather than handing over rules; they accelerate natural acquisition, though gains may be delayed until the learner is developmentally ready.' },
     core: [
       { type: 'prose', html: 'An <strong>interlanguage</strong> is the learner’s developing L2 system, which advances by <strong>restructuring</strong> as learners test and revise hypotheses. Both <em>noticing</em> and <em>input processing</em> feed that development by controlling where limited attention goes.' },
       { type: 'steps', items: [
@@ -143,7 +185,15 @@ EXAM.addQuestions([
     section: 'application',
     operator: 'design',
     prompt: 'Contextual Application: Overcoming "The Rule of Three" in Saudi K-12 Schools. In many Saudi public schools, grammar is taught through a "deductive" approach (teacher gives rule, students do exercises). Using Larsen-Freeman\'s Three Dimensions, design an "inductive" intervention for teaching the "Present Perfect" to 11th-grade students that moves beyond simple "Form" (have/has + V3).',
-    spine: ['Problem: deductive PPP teaches only FORM (have/has + V3)', 'Reframe across 3 dimensions; teach inductively (CR)', 'MEANING: induce "past-with-present-relevance" from sentence pairs + timelines', 'USE: role-play contexts forcing present-perfect vs simple-past choice', 'FORM: "Find someone who has…" mingle → meaningful iteration', 'Assess by a communicative task, not a gap-fill'],
+    spine: { shape: 'flow', layout: 'stack', start: 'problem', end: 'outcome',
+      lead: 'Larsen-Freeman\'s three dimensions, taught inductively (consciousness-raising)',
+      nodes: [
+        'The deductive have/has plus V3 drill teaches only the Form wedge, so learners can conjugate the present perfect but cannot choose it',
+        'Meaning: students induce from matched pairs and timelines that the present perfect links the past to now',
+        'Use: role plays force a choice between present perfect and simple past, so students notice why it is selected',
+        'Form: a "Find someone who has..." mingling survey produces have/has plus V3 many times to complete a real task',
+        'Learners leave able to use the present perfect appropriately, assessed by a communicative task rather than a gap-fill',
+      ] },
     core: [
       { type: 'prose', html: '<strong>Problem + evidence.</strong> The deductive “state the rule, then do the exercises” routine — here, “have/has + V3” — is the <em>“Rule of Three”</em> the prompt targets: it teaches only the <strong>Form</strong> wedge, so learners can <em>conjugate</em> the present perfect but cannot <em>choose</em> it. Larsen-Freeman’s three dimensions show the real challenge lies in <strong>Meaning</strong> and <strong>Use</strong>, and an <strong>inductive</strong> (consciousness-raising) design targets them.' },
       { type: 'steps', items: [
@@ -162,7 +212,15 @@ EXAM.addQuestions([
     section: 'application',
     operator: 'apply',
     prompt: 'Cultural & Linguistic Analysis: Negative Transfer and the "Verb to Be". Arabic L1 learners frequently omit the "copula" (verb to be) in sentences like "He is a teacher" (yielding "He teacher"). Based on Ellis\'s Consciousness-Raising (CR) framework, propose a task to help Saudi university students "notice" this "hidden" grammatical feature.',
-    spine: ['Why hidden: Arabic has no present copula → negative transfer + low salience', 'CR = inductive, explicit, awareness-raising (Ellis)', '1 Data set (✓/✗ copula) → students induce "English needs be"', '2 Input enhancement + explicit Arabic–English contrast', '3 "Notice the gap" vs own output → negative-evidence feedback', 'Assess by an editing task, not fluency'],
+    spine: { shape: 'flow', layout: 'stack', start: 'problem', end: 'outcome',
+      lead: 'Ellis\'s consciousness-raising framework: inductive, explicit, awareness-raising',
+      nodes: [
+        'Arabic has no present-tense copula, so learners transfer "He teacher"; the copula also carries little meaning and has low salience',
+        'Data set: students sort grammatical and ungrammatical sentences and induce that English requires a form of be',
+        'Enhance input and contrast L1 with L2: highlight every copula and set the Arabic nominal sentence against its English counterpart',
+        'Notice the gap: students check their own writing or speech against the target and self-correct with focused negative evidence',
+        'Students consciously notice and monitor the copula, assessed by an editing task plus monitored production rather than a fluency test',
+      ] },
     core: [
       { type: 'flag', html: '<strong>Framework note.</strong> The prompt names <strong>Ellis’s CR framework</strong>. CR is inductive and explicit — learners discover the rule from data — which suits a <em>low-salience</em> feature like the copula.' },
       { type: 'prose', html: '<strong>Why it is “hidden.”</strong> Arabic forms nominal sentences with <strong>no present-tense copula</strong> (“He teacher” is well-formed in Arabic), so learners transfer that pattern; and the copula carries almost no meaning, so it has <strong>low salience</strong> and slips past attention. Mere exposure is not enough — attention must be directed to it.' },

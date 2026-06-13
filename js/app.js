@@ -42,6 +42,118 @@ function highlight(html, term) {
     .join('');
   return html.replace(/>([^<]+)</g, (m, txt) => '>' + mark(txt) + '<');
 }
+/* highlight inside an already-escaped plain string (spine node labels
+   are bare text, not tagged HTML, so highlight()'s >text< pass misses
+   them). Never marks inside an HTML entity. */
+function markText(escaped, term) {
+  if (!term) return escaped;
+  const re = new RegExp('(' + term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+  return escaped
+    .split(/(&[a-zA-Z]+;|&#\d+;|&#x[0-9a-fA-F]+;)/)
+    .map((seg, i) => i % 2 ? seg : seg.replace(re, '<mark>$1</mark>'))
+    .join('');
+}
+
+/* ── memory spine: relationship-revealing renderer ───────────────
+   q.spine is either a legacy array of strings (rendered as the old
+   numbered list) or an object { shape:'flow'|'contrast'|'map'|'list' }
+   that draws how the cues relate. Node labels are author-written plain
+   text, so they pass through escapeHtml + highlight like the old list.
+   spineText() flattens any form back to strings for the search index. */
+function renderSpine(spine, term) {
+  const h = s => markText(escapeHtml(s == null ? '' : s), term);
+  if (Array.isArray(spine)) {
+    return `<ol class="spine">${spine.map(c => `<li>${h(c)}</li>`).join('')}</ol>`;
+  }
+  switch (spine && spine.shape) {
+    case 'flow':     return spineFlow(spine, h);
+    case 'contrast': return spineContrast(spine, h);
+    case 'map':      return spineMap(spine, h);
+    case 'list':
+    default:
+      return `<ol class="spine">${((spine && spine.items) || []).map(c => `<li>${h(c)}</li>`).join('')}</ol>`;
+  }
+}
+
+function spineFlow(s, h) {
+  const arrow = '<span class="sp-arrow" aria-hidden="true"></span>';
+  const nodes = (s.nodes || []).map((n, i, arr) => {
+    if (n && Array.isArray(n.rank)) {
+      return `<div class="sp-rank">${n.rank.map(f => `<span class="sp-feed">${h(f)}</span>`).join('')}</div>`;
+    }
+    const cls = 'sp-node'
+      + (s.start && i === 0 ? ' sp-start' : '')
+      + (s.end && i === arr.length - 1 ? ' sp-end' : '');
+    return `<div class="${cls}">${h(n)}</div>`;
+  }).join(arrow);
+  return `<div class="spine-flow${s.layout === 'stack' ? ' sp-stack' : ''}">`
+    + (s.lead ? `<span class="sp-lead">${h(s.lead)}</span>` : '')
+    + nodes
+    + `</div>`
+    + (s.note ? `<p class="sp-note">${h(s.note)}</p>` : '');
+}
+
+function spineContrast(s, h) {
+  const side = (d, cls) => d
+    ? `<div class="sp-col ${cls}">`
+        + (d.label ? `<span class="sp-col-label">${h(d.label)}</span>` : '')
+        + (d.text ? `<span class="sp-col-text">${h(d.text)}</span>` : '')
+        + `</div>`
+    : '';
+  return `<div class="spine-contrast">`
+    + side(s.a, 'sp-col-a')
+    + `<span class="sp-rel" aria-hidden="true">${escapeHtml(s.rel || 'vs')}</span>`
+    + side(s.b, 'sp-col-b')
+    + (s.bridge ? `<div class="sp-bridge">${h(s.bridge)}</div>` : '')
+    + `</div>`;
+}
+
+function spineMap(s, h) {
+  const spoke = sp => `<li class="sp-spoke">`
+    + (sp.label ? `<span class="sp-spoke-label">${h(sp.label)}</span>` : '')
+    + (sp.text ? `<span class="sp-spoke-text">${h(sp.text)}</span>` : '')
+    + (sp.children && sp.children.length
+        ? `<ul class="sp-children">${sp.children.map(c => `<li>${h(c)}</li>`).join('')}</ul>`
+        : '')
+    + `</li>`;
+  return `<div class="spine-map">`
+    + (s.center ? `<div class="sp-center">${h(s.center)}</div>` : '')
+    + `<ul class="sp-spokes">${(s.spokes || []).map(spoke).join('')}</ul>`
+    + (s.payoff ? `<p class="sp-payoff">${h(s.payoff)}</p>` : '')
+    + `</div>`;
+}
+
+function spineText(spine) {
+  if (!spine) return [];
+  if (Array.isArray(spine)) return spine;
+  const out = [];
+  switch (spine.shape) {
+    case 'flow':
+      if (spine.lead) out.push(spine.lead);
+      (spine.nodes || []).forEach(n => {
+        if (n && Array.isArray(n.rank)) out.push.apply(out, n.rank);
+        else out.push(n);
+      });
+      if (spine.note) out.push(spine.note);
+      break;
+    case 'contrast':
+      [spine.a, spine.b].forEach(d => { if (d) { if (d.label) out.push(d.label); if (d.text) out.push(d.text); } });
+      if (spine.bridge) out.push(spine.bridge);
+      break;
+    case 'map':
+      if (spine.center) out.push(spine.center);
+      (spine.spokes || []).forEach(sp => {
+        if (sp.label) out.push(sp.label);
+        if (sp.text) out.push(sp.text);
+        if (sp.children) out.push.apply(out, sp.children);
+      });
+      if (spine.payoff) out.push(spine.payoff);
+      break;
+    default:
+      out.push.apply(out, spine.items || []);
+  }
+  return out.filter(Boolean);
+}
 
 /* ── init ────────────────────────────────────────────────────── */
 function init() {
@@ -162,8 +274,8 @@ function renderQuestion(q, term) {
     </header>
 
     <div class="layer layer-spine">
-      <div class="layer-label">Memory spine <span>cues to rebuild the answer</span></div>
-      <ol class="spine">${q.spine.map(c => `<li>${highlight(escapeHtml(c), term)}</li>`).join('')}</ol>
+      <div class="layer-label">Memory spine <span>how the cues connect</span></div>
+      ${renderSpine(q.spine, term)}
     </div>
 
     <div class="layer layer-core">
@@ -224,7 +336,7 @@ function renderSearch() {
   const term = state.search;
   const re = new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
 
-  const hay = q => [q.term, q.prompt, ...(q.spine || []),
+  const hay = q => [q.term, q.prompt, ...spineText(q.spine),
     ...(q.core || []).map(b => JSON.stringify(b)),
     ...(q.expansion || [])].join(' ');
 

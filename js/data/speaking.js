@@ -17,7 +17,13 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Appropriacy',
     prompt: 'Appropriacy:',
-    spine: ['Sociocultural competence / pragmatics: the "when and why" of language use', 'Not enough to be accurate + fluent — must also be socially appropriate', 'Proper politeness, directness, formality; know what NOT to say + the nonverbal', 'Most-researched area: speech acts (greeting, thanking, disagreeing)', 'Choice of form depends on social distance, status, the act itself'],
+    spine: { shape: 'map', center: 'Appropriacy: sociocultural competence, or pragmatics', payoff: 'It answers the "when and why" of language use, beyond mere accuracy and fluency.',
+      spokes: [
+        { label: 'Beyond accuracy and fluency', text: 'speakers must also use language appropriately for the social and cultural context' },
+        { label: 'What it involves', text: 'proper politeness, directness, and formality, knowing what not to say and what to signal nonverbally' },
+        { label: 'Most-researched area', text: 'speech acts such as greeting, thanking, and disagreeing' },
+        { label: 'What governs the form', text: 'the choice depends on social distance, status, and the act itself' },
+      ] },
     core: [
       { type: 'def', html: '<strong>Appropriacy</strong> is sociocultural competence, or <strong>pragmatics</strong>: it is not enough for L2 speakers to be accurate and fluent — they must also use language appropriately for the social and cultural context.' },
       { type: 'prose', html: 'It means communicating with the proper politeness, directness, and formality, knowing what <em>not</em> to say, and knowing what to communicate nonverbally. Its most-researched area is <strong>speech acts</strong> — the ways people perform social functions such as greeting, thanking, and disagreeing — whose form depends on factors like social distance and status. Appropriacy answers the “when and why” of language use.' },
@@ -31,7 +37,12 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Authenticity',
     prompt: 'Authenticity:',
-    spine: ['Whether language, materials, and tasks are real rather than artificial', '"Slippery": authentic for whom, for what purpose, in what context?', 'Two senses: authentic materials + the learner’s own "authentic voice"', 'Most published materials fall short (scripted, error-free dialogues)', 'Adults need material authentic in content AND interactional environment'],
+    spine: { shape: 'map', center: 'Authenticity: whether language, materials, and tasks are real rather than artificial', payoff: 'The construct is "slippery": authentic for whom, for what purpose, and in what context?',
+      spokes: [
+        { label: 'Two senses', children: [ 'authentic teaching materials', "the learner's own self-expression, or authentic voice" ] },
+        { label: 'Most published materials fall short', text: 'scripted, error-free dialogues that model a vague idealised native-speaker English' },
+        { label: 'What adults need', text: 'material authentic in both content and interactional environment' },
+      ] },
     core: [
       { type: 'def', html: '<strong>Authenticity</strong> concerns whether the language, materials, and tasks of instruction are <strong>real rather than artificial</strong>. The construct is “slippery” — authentic for whom, for what purpose, and in what context?' },
       { type: 'prose', html: 'It has two senses: <strong>authentic teaching materials</strong>, and the learner’s own self-expression, or <strong>authentic voice</strong>. Most published speaking materials fall short, relying on scripted dialogues that are free of speaker errors and model a vague, idealised native-speaker English. Adults with real-world experience need materials that are authentic in both content and interactional environment.' },
@@ -45,7 +56,13 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Spoken Grammar of English (SGE)',
     prompt: 'Spoken Grammar of English (SGE):',
-    spine: ['The grammar of speech — uniquely different from written grammar', 'We speak in phrasal chains, not sentences (joined by "and", "but")', 'Includes forms inappropriate in writing: ellipsis, clipped forms', 'Hesitation markers (um, y’know) + discourse markers (cuz, oh)', 'A working knowledge of SGE improves fluency AND appropriacy'],
+    spine: { shape: 'map', center: 'Spoken grammar of English (SGE): the grammar of speech', payoff: 'A working knowledge of SGE improves a speaker\'s fluency and appropriacy.',
+      spokes: [
+        { label: 'Distinct from written grammar', text: 'it has uniquely special qualities that set it apart from writing' },
+        { label: 'Phrasal chains, not sentences', text: 'we speak in chains joined by simple conjunctions like "and" and "but"' },
+        { label: 'Forms inappropriate in writing', text: 'ellipsis ("Wanna go with?") and clipped forms ("ad" for advertisement)' },
+        { label: 'Markers everywhere', text: 'hesitation markers ("um," "y\'know") and discourse markers ("cuz," "oh")' },
+      ] },
     core: [
       { type: 'def', html: 'The <strong>spoken grammar of English (SGE)</strong> is the grammar of speech, which has uniquely special qualities that distinguish it from <strong>written grammar</strong>.' },
       { type: 'prose', html: 'We do not speak in sentences but in <strong>phrasal chains</strong> joined by simple conjunctions like “and” and “but.” SGE includes forms that would be inappropriate in writing — ellipsis (“Wanna go with?”), clipped forms (“ad” for advertisement), and the ubiquitous hesitation markers (“um,” “y’know”) and discourse markers (“cuz,” “oh”). A working knowledge of SGE improves a speaker’s fluency and appropriacy.' },
@@ -59,7 +76,13 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Clustering',
     prompt: 'Clustering:',
-    spine: ['One of H. D. Brown’s characteristics of speech complexity', 'Speech is segmented into THOUGHT GROUPS, not single words', 'Even single words may be contracted', 'Fluent speech comes out in phrasal chains', 'Learners must produce + perceive groups, not isolated words'],
+    spine: { shape: 'map', center: 'Clustering: one of H. D. Brown\'s characteristics that make speech complex', payoff: 'It is part of why speaking is described as "staggeringly complex."',
+      spokes: [
+        { label: 'Segmented into thought groups', text: 'speech is produced in groups rather than word by word' },
+        { label: 'Words may contract', text: 'even single words may be contracted within the group' },
+        { label: 'Fluent speech runs in phrasal chains', text: 'it does not come out one isolated word at a time' },
+        { label: 'What learners must do', text: 'produce and perceive these groups rather than single words' },
+      ] },
     core: [
       { type: 'def', html: '<strong>Clustering</strong> is one of the characteristics that make speech complex: speech is segmented into <strong>thought groups</strong> rather than produced word by word, and even single words may be contracted.' },
       { type: 'prose', html: 'Because speakers cluster words into phrasal chains, fluent speech does not come out one isolated word at a time. Learners therefore need to produce and perceive these groups rather than single words, which is part of why speaking is described as “staggeringly complex.”' },
@@ -75,7 +98,13 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'identify',
     prompt: 'Identify and describe the characteristics of speech that contribute to its "staggering complexity" as proposed by H. D. Brown (2007).',
-    spine: ['H. D. Brown (2007): several features make speech complex', 'Clustering — thought groups + contractions, not single words', 'Hesitation markers + pausing', 'Colloquial language — slang and idioms', 'Suprasegmentals — stress, rhythm, intonation', 'PLUS interaction: many simultaneous demands at once'],
+    spine: { shape: 'map', center: 'H. D. Brown (2007): features that make speaking "staggeringly complex"', payoff: 'On top of these, speech is usually interactive, so monitoring, planning, producing, and checking effect all run at once.',
+      spokes: [
+        { label: 'Clustering', text: 'speech comes in thought groups and contractions, not single words' },
+        { label: 'Hesitation markers and pausing', text: 'real speech is full of "um" and "uh" and pauses' },
+        { label: 'Colloquial language', text: 'everyday slang and idioms' },
+        { label: 'Suprasegmental features', text: 'stress, rhythm, and intonation carry meaning across the utterance' },
+      ] },
     core: [
       { type: 'prose', html: 'H. D. Brown (2007) identifies a set of features that together make the act of speaking <strong>“staggeringly complex.”</strong>' },
       { type: 'steps', items: [
@@ -94,7 +123,10 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'compare',
     prompt: 'Compare and contrast "language-oriented" and "message-oriented" techniques in the teaching of oral skills.',
-    spine: ['The fluency/accuracy issue → message-oriented vs language-oriented', 'MESSAGE-oriented = teaching language USE: fluency, communication, freer speech', 'LANGUAGE-oriented = teaching language USAGE: accuracy, conforming to the system, controlled', 'Balance depends on context: EFL → more fluency; ESL → more accuracy is fine', 'Rule of thumb: explicit language-focused work ≤ ~25% of contact'],
+    spine: { shape: 'contrast', rel: 'vs',
+      a: { label: 'Message-oriented', text: 'teaches language use: freer communicative speech aimed at fluency, operating the system quickly' },
+      b: { label: 'Language-oriented', text: 'teaches language usage: controlled production aimed at accuracy, conforming to the language system' },
+      bridge: 'The two are complementary and sit on the fluency-accuracy divide; EFL settings merit more fluency while ESL can give more time to accuracy, with explicit language-focused work kept to about a quarter of total contact.' },
     core: [
       { type: 'distinction',
         left:  { label: 'MESSAGE-ORIENTED', html: 'Techniques that teach <strong>language use</strong>. The focus is on communicating meaning, with freer, more communicative speech and an emphasis on <strong>fluency</strong> — “operating the system quickly.”' },
@@ -115,7 +147,13 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'justify',
     prompt: 'Justify the use of student-produced transcriptions as a pedagogical tool in a speaking course.',
-    spine: ['Transcription = a faithful reproduction of real talk on paper', 'Lets students "see" speech — and see that it is far from perfect', 'Keep hesitation markers, false starts, pauses; correct NOTHING', 'Builds metalinguistic awareness of real spoken features', 'Then analyse communication breakdowns and repair'],
+    spine: { shape: 'map', center: 'Why student-produced transcription earns a place in a speaking course', payoff: 'Research reports gains in self-correction plus positive learner attitudes, supporting it as a regular tool.',
+      spokes: [
+        { label: 'It lets students "see" speech', text: 'a faithful transcript keeps hesitation markers, false starts, and pauses and corrects nothing, showing speech is far from perfect' },
+        { label: 'It builds metalinguistic awareness', text: 'learners notice the real features of spoken language, not just sentence-level forms' },
+        { label: 'It turns talk into something analysable', text: 'students locate communication breakdowns and work out what happened, why, and how to repair them' },
+        { label: 'It serves fluency and accuracy', text: 'analysis happens after the talk, so accuracy work does not interrupt the communication' },
+      ] },
     core: [
       { type: 'prose', html: 'Producing a great deal of language is not enough; to become competent speakers, learners must also become <strong>metalinguistically aware</strong> of the features of real spoken language. Transcribing their own recorded talk is a powerful way to build that awareness.' },
       { type: 'steps', items: [
@@ -134,7 +172,10 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'synthesize',
     prompt: 'Synthesize the relationship between "Appropriacy" and "Conversation Analysis (CA)" in promoting interactional competence.',
-    spine: ['Appropriacy = the social fit: speech acts done with proper politeness/formality', 'CA = the structure of talk: turn-taking, sequence, repair, openings/closings', 'CA "enriches WHAT to teach and sharpens HOW to teach"', 'Interactional competence = the right social action within the real structure of talk', 'Together: appropriacy gives the social fit; CA gives the machinery'],
+    spine: { shape: 'contrast', rel: '+',
+      a: { label: 'Appropriacy', text: 'the social fit: performing speech acts with the right politeness, directness, and formality' },
+      b: { label: 'Conversation analysis', text: 'the structure of talk: turn-taking, sequence, repair, and openings and closings' },
+      bridge: 'CA enriches what to teach and sharpens how to teach it, so the two combine into interactional competence: appropriacy chooses the social action while CA supplies the sequential machinery it must fit.' },
     core: [
       { type: 'prose', html: 'Interactional competence — being able to take part in real talk appropriately — draws on both <strong>appropriacy</strong> and <strong>conversation analysis (CA)</strong>, which supply two complementary halves.' },
       { type: 'steps', items: [
@@ -155,7 +196,16 @@ EXAM.addQuestions([
     section: 'application',
     operator: 'design',
     prompt: 'Contextual Application: Public Schools & Gender-Segregated Classrooms. In Saudi K-12 settings, female students are often reported to be more "reticent" and "shy" during oral activities [27]. Drawing on the study by Zhang and Head (2009) mentioned in the chapter, propose an intervention to increase motivation and self-confidence in a 9th-grade girls\' classroom.',
-    spine: ['Problem: reticence + shyness in oral activities (a known EFL challenge)', 'Zhang & Head (2009): involve students in designing the course + materials → ownership', 'their study: over a year → improved attitudes, motivation, self-confidence', 'Co-design topics + activities with the 9th-grade girls', 'Lower the threat: small groups for reticent students, clear roles, pre-taught functional language', 'Assess by participation + confidence, not error counts'],
+    spine: { shape: 'flow', layout: 'stack', start: 'problem', end: 'outcome',
+      lead: 'Zhang and Head (2009)',
+      nodes: [
+        'Reticence and shyness in oral activities, a known EFL challenge where speaking norms are cautious',
+        'Co-design the course with the 9th-grade girls: let them choose topics and create the materials and activities',
+        'Lower the threat of speaking: small groups for reticent students, clear roles, and pre-taught functional language',
+        'Build on the girls\' own experience and interests, using pair and small-group tasks before whole-class speaking',
+        'Greater willingness to speak, assessed through participation and confidence rather than error counts',
+      ],
+      note: 'Their study found this student-centred approach improved attitudes, motivation, and self-confidence over a year.' },
     core: [
       { type: 'prose', html: '<strong>Problem + evidence.</strong> Reticence and shyness in oral activities are a known EFL challenge — simply getting students to speak, especially where classroom speaking norms are cautious. The study by <strong>Zhang and Head (2009)</strong> points to a student-centred remedy.' },
       { type: 'steps', items: [
@@ -174,7 +224,15 @@ EXAM.addQuestions([
     section: 'application',
     operator: 'apply',
     prompt: 'Research-Informed Pedagogy: Critical Evaluation of Materials for Saudi Private Institutes. Many language institutes in Saudi Arabia often rely on "scripted dialogues" that are free of "speaker errors" and "hesitation markers" [37]. Critique this practice using the "Authenticity" construct and propose a model for incorporating "corpus-based" materials for adult learners.',
-    spine: ['Critique via Authenticity: scripted dialogues are idealised, not real talk', 'free of speaker errors + hesitation/discourse markers; an unspecified native variety', 'Adults with real-world experience do not benefit from artificial material', 'Risk: learners never meet real SGE → avoid structures or transfer L1 forms', 'Propose corpus-based materials grounded in real spoken language', 'Simplify the task, not the text'],
+    spine: { shape: 'flow', layout: 'stack', start: 'problem', end: 'outcome',
+      nodes: [
+        'Through authenticity, scripted dialogues fail on content and voice: idealised, free of speaker errors and markers, an unspecified native variety',
+        'Adults with real-world experience do not benefit from such artificially created material',
+        'Name the cost: learners never meet real spoken grammar, so they may avoid structures or transfer non-idiomatic forms from Arabic',
+        'Replace the scripts with corpus-based materials grounded in large spoken corpora, teaching the expressions, grammar, and markers that actually occur',
+        'Keep the input authentic but stage the task: simplify what learners do with it, not the text itself',
+        'Adults meet real spoken English and the features scripts strip out, building genuine speaking competence',
+      ] },
     core: [
       { type: 'prose', html: '<strong>Critique.</strong> Through the <strong>authenticity</strong> construct, scripted dialogues fail on both of its senses: they are not authentic in content — they are idealised, free of speaker errors, hesitation markers, and discourse markers, and represent some unspecified native-speaker variety — and they give no room for the learner’s authentic voice. Adults who already have real-world experience do not benefit from such artificially created material.' },
       { type: 'steps', items: [

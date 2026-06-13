@@ -18,7 +18,11 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Cognitive Perspective',
     prompt: 'Cognitive Perspective:',
-    spine: ['Writing ability (often from L1) + L2 proficiency', 'Composing = juggling message, points, organisation, a model of the reader', 'Plan → monitor → revise; in L2 also find the right language', 'Skills and knowledge that reside WITHIN the individual writer', 'L1 writing skills transfer once proficiency is high enough'],
+    spine: { shape: 'map', center: 'Second-language writing as a cognitive act', payoff: 'The skills and knowledge sit within the individual writer, and L1 writing transfers once L2 proficiency is high enough.',
+      spokes: [
+        { label: 'Two ingredients', text: 'It combines writing ability, often learned first in the L1, with L2 proficiency.' },
+        { label: 'Composing is juggling', text: 'The writer holds the message, the main and sub-points, the organisation, and a model of the reader all at once.', children: ['Plan, monitor, and revise throughout', 'In an L2, also search for the right language to say it'] },
+      ] },
     core: [
       { type: 'def', html: 'The <strong>cognitive perspective</strong> views second-language writing as a combination of <strong>writing ability</strong> (often learned first in the L1) and <strong>L2 proficiency</strong> — a set of skills and knowledge that reside within the individual writer.' },
       { type: 'prose', html: 'On this view composing is a highly complex mental task: the writer holds in mind the overall message, the main points and sub-points, how to organise them, and a representation of the likely readers, while planning, monitoring, and revising. Adding a second language makes it harder still, because the writer must also find the appropriate language to express ideas clearly and accurately.' },
@@ -32,7 +36,13 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Sociocultural Perspective',
     prompt: 'Sociocultural Perspective:',
-    spine: ['Writing = socially + culturally situated literacy practices of a community', 'Learning to write = becoming a member of a discourse community', 'Always for a purpose and audience; shaped by culture and setting', 'Texts never stand alone — they respond to other texts', 'What counts as "good writing" is community-relative'],
+    spine: { shape: 'map', center: 'Writing as situated social practice', payoff: 'What counts as good writing is relative to the community.',
+      spokes: [
+        { label: 'Literacy practices', text: 'Writing is a socially and culturally situated set of literacy practices shared by a particular community.' },
+        { label: 'Learning to write', text: 'It means becoming a member of a discourse community.' },
+        { label: 'Purpose and setting', text: 'Writing is always done for a purpose and an audience, shaped by a particular culture and setting.' },
+        { label: 'Texts in dialogue', text: 'Texts never stand alone; every text is shaped by and responds to other texts.' },
+      ] },
     core: [
       { type: 'def', html: 'The <strong>sociocultural perspective</strong> sees writing as part of a socially and culturally situated set of <strong>literacy practices shared by a particular community</strong>. Learning to write is the process of becoming a member of a <strong>discourse community</strong>.' },
       { type: 'prose', html: 'Writing is always done for a purpose, aimed at a specific audience, and shaped by a particular culture and setting, so what counts as good writing varies from one community to another. A key insight is that texts never exist in isolation: every text is shaped by, and responds to, other pre-existing texts.' },
@@ -46,7 +56,13 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Discourse Community',
     prompt: 'Discourse Community:',
-    spine: ['A group that shares values + ways of using language for particular purposes', 'e.g. biologists, politicians, fans of a musical genre', 'Has its own conventions for what counts as "good writing"', 'Learning to write = learning to participate in one (or more)', 'Different disciplines → different conventions, which do not transfer'],
+    spine: { shape: 'map', center: 'A discourse community', payoff: 'Different disciplines have different conventions, which do not transfer across fields.',
+      spokes: [
+        { label: 'Shared language use', text: 'A group that shares values and ways of using language for particular purposes.' },
+        { label: 'Examples', text: 'Biologists, politicians, or even fans of a musical genre.' },
+        { label: 'Own conventions', text: 'Each has its own conventions for what counts as good writing, such as the passive voice.' },
+        { label: 'Learning to write', text: 'It means learning to participate in one or more such communities.' },
+      ] },
     core: [
       { type: 'def', html: 'A <strong>discourse community</strong> is a group of people — for example, biologists, politicians, or even fans of a musical genre — who <strong>share values and assumptions about using language</strong> and have particular ways of using language, spoken or written, for particular purposes.' },
       { type: 'prose', html: 'Each community has its own conventions, so a stylistic choice such as the passive voice may be good writing in one discipline but not in another. Learning to write therefore means learning to participate in one or more discourse communities, which is why writers cannot simply transfer everything they know from one field to another.' },
@@ -60,7 +76,9 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Process Approach',
     prompt: 'Process Approach:',
-    spine: ['The dominant paradigm in writing instruction', 'Several drafts for feedback + revision, not one graded draft', 'Supports students through stages: pre-writing → drafting → feedback → revising', 'Content and organisation first; language later', 'Reflects that writing is recursive, not linear'],
+    spine: { shape: 'flow', lead: 'The dominant paradigm: several drafts for feedback, not one graded draft',
+      nodes: [ 'Pre-writing: brainstorm or outline to generate ideas', 'Drafting: get a full version down on the page', 'Feedback: give and receive responses on the draft', 'Revising: rework content and organisation first, language later' ],
+      note: 'Writing is recursive, not linear; writers loop back and forth among these stages.' },
     core: [
       { type: 'def', html: 'The <strong>process approach</strong> is the dominant paradigm in writing instruction. Instead of producing single-draft essays graded mainly for accuracy, students write <strong>several drafts of each piece</strong> for feedback and evaluation.' },
       { type: 'prose', html: 'The emphasis falls on supporting students through the stages of writing: pre-writing (such as brainstorming or outlining), drafting, giving and receiving feedback, and revising. The approach reflects the finding that writing is <strong>recursive rather than linear</strong>, with writers moving back and forth among planning, writing, rereading, and revising.' },
@@ -74,7 +92,13 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Intertextuality',
     prompt: 'Intertextuality:',
-    spine: ['All writing reuses pre-existing words and phrases, combined in new ways', 'Every text refers to and builds on what came before', 'The borrowing conventions are often implicit — known within a discourse community', 'Invoked to explain students’ difficulty avoiding plagiarism', 'Beginners lack the community experience to manage it'],
+    spine: { shape: 'map', center: 'Intertextuality', payoff: 'It is often invoked to explain why students struggle to avoid plagiarism.',
+      spokes: [
+        { label: 'Reuse and recombine', text: 'All writing uses pre-existing words and phrases, combined in new ways.' },
+        { label: 'Builds on the past', text: 'Every text refers to and builds on what has come before.' },
+        { label: 'Implicit conventions', text: 'The borrowing conventions are implicit and known only within a discourse community.' },
+        { label: 'The beginner gap', text: 'Beginning writers lack that community experience, so paraphrasing is hard for them.' },
+      ] },
     core: [
       { type: 'def', html: '<strong>Intertextuality</strong> is the idea that <strong>all writing uses pre-existing words and phrases, combined in new ways</strong>, referring to and building on what has come before. Writers constantly draw on and refer to other existing texts in their own writing.' },
       { type: 'prose', html: 'These borrowing conventions are often implicit and known only to people within a particular discourse community. The notion is frequently invoked to explain why students struggle to avoid plagiarism: beginning writers, lacking that community experience, find it hard to follow guidance about “using their own words” and paraphrasing.' },
@@ -90,7 +114,13 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'explain',
     prompt: 'Define "Discourse Community" and explain its significance in academic writing according to the sociocultural perspective.',
-    spine: ['Discourse community = shares values + ways of using language for purposes', 'Academic writing = joining a disciplinary community and its conventions', 'Good writing is community-relative (passive voice, citation, genre)', 'Learning to write academically = becoming a member of that community', 'Explains why writing skills do not transfer across disciplines'],
+    spine: { shape: 'map', center: 'Discourse community in academic writing', payoff: 'Teaching academic writing means teaching students to join a community, not just to write correct sentences.',
+      spokes: [
+        { label: 'What it is', text: 'A group that shares values and ways of using language for particular purposes.' },
+        { label: 'Joining a discipline', text: 'Academic writing means joining a disciplinary community and its conventions.' },
+        { label: 'Good writing is relative', text: 'The passive voice, a citation style, or a genre may be valued in one field and rejected in another.' },
+        { label: 'Skills do not transfer', text: 'Because conventions differ, mastery in one discipline does not carry to the next.' },
+      ] },
     core: [
       { type: 'prose', html: 'A <strong>discourse community</strong> is a group that shares values and assumptions about using language and has its own ways of using language for particular purposes. From the <strong>sociocultural perspective</strong>, learning to write is the process of becoming a member of such a community.' },
       { type: 'steps', items: [
@@ -109,7 +139,10 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'compare',
     prompt: 'Compare and contrast "Eye" learners and "Ear" learners and analyze their different instructional needs in a writing classroom.',
-    spine: ['EYE = learned English through formal education (reading + grammar)', 'strengths: formal vocabulary, explicit grammar; weakness: fluency / naturalness', 'EAR = learned English informally through oral interaction ("Generation 1.5")', 'strengths: fluency / naturalness; weakness: academic reading/writing, formal grammar', 'Needs are opposite → the teacher adjusts instruction to each'],
+    spine: { shape: 'contrast', rel: 'vs',
+      a: { label: 'Eye learners', text: 'Learned English through formal education, strong in vocabulary and explicit grammar but weaker in fluency and naturalness.' },
+      b: { label: 'Ear learners', text: 'Learned English informally through oral interaction (Generation 1.5), fluent and natural but weaker in academic reading, writing, and formal grammar.' },
+      bridge: 'Their strengths are opposite, so the teacher gives eye learners fluency and composition and ear learners explicit form and academic literacy.' },
     core: [
       { type: 'distinction',
         left:  { label: '“EYE” LEARNERS', html: 'Learned English through <strong>formal education</strong>, and so primarily through reading and grammar instruction. Their strengths are formal vocabulary and explicit knowledge of grammar, but they may lack the fluency and naturalness of ear learners.' },
@@ -130,7 +163,14 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'justify',
     prompt: 'Justify the implementation of a "Process Approach" in a second language writing curriculum.',
-    spine: ['Writing is recursive (plan ↔ write ↔ reread ↔ revise), not linear', 'Experts plan and revise more, and work on content before surface', 'Multiple drafts + feedback support development; one graded draft does not', 'Separate global (content/organisation) from local (language) concerns', 'L2 writers "need more of everything" — more practice and feedback'],
+    spine: { shape: 'map', center: 'Why the process approach is justified', payoff: 'It aligns the curriculum with how writing is genuinely produced.',
+      spokes: [
+        { label: 'Writing is recursive', text: 'Real writers loop among planning, writing, rereading, and revising rather than working in a straight line.' },
+        { label: 'Experts work this way', text: 'They plan and revise more, and attend to content before surface.' },
+        { label: 'Drafts drive growth', text: 'Several drafts with feedback support development in a way one graded draft cannot.' },
+        { label: 'Global before local', text: 'Feedback separates content and organisation from language, addressing meaning first.' },
+        { label: 'Fits L2 writers', text: 'L2 writers need more of everything, and the staged cycle supplies the practice and feedback.' },
+      ] },
     core: [
       { type: 'prose', html: 'The process approach is justified by what research shows real writers actually do. Writing is <strong>recursive, not linear</strong>: expert writers move back and forth among planning, writing, rereading, and revising, and they spend more time on content and organisation than on small surface changes.' },
       { type: 'steps', items: [
@@ -149,7 +189,10 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'synthesize',
     prompt: 'Synthesize the relationship between reading and writing through the concepts of "Reading to Write" and "Writing to Read."',
-    spine: ['Reading and writing are complementary parts of literacy, not separate skills', 'Writing problems often trace back to reading', 'READING TO WRITE: use reading as input/source for a text (rhetorical, linguistic, stylistic)', 'WRITING TO READ: use writing to interpret and deepen understanding of a text', 'Together they feed each other → stronger literacy'],
+    spine: { shape: 'contrast', rel: 'vs',
+      a: { label: 'Reading to write', text: 'Using reading as input for a text, mining it for rhetorical, linguistic, and stylistic knowledge.' },
+      b: { label: 'Writing to read', text: 'Using writing, such as response journals, to interpret a text and deepen understanding of it.' },
+      bridge: 'Reading and writing are complementary parts of literacy that run in a loop: reading feeds writing, writing deepens reading, and taught together they build literacy more effectively.' },
     core: [
       { type: 'prose', html: 'Reading and writing are now seen as <strong>complementary elements of literacy</strong> rather than separate skills, and writing problems can often be traced back to problems with reading. Two connections make the relationship concrete.' },
       { type: 'steps', items: [
@@ -169,7 +212,15 @@ EXAM.addQuestions([
     section: 'application',
     operator: 'design',
     prompt: 'Contextual Application: Transitioning Saudi "Eye" Learners to Academic Writing. Most Saudi students entering university have been "Eye" learners, focused heavily on "reading and grammar instruction" in public schools. Based on the "Process Approach" and "Cognitive Perspective," how can a foundation-year writing instructor shift their focus from "grammatical accuracy" to "effective composition"?',
-    spine: ['Problem: Saudi "eye" learners = strong grammar, fixated on accuracy, weak at composing', 'Cognitive perspective: writing = ability + proficiency; composing juggles message, audience, organisation', 'Process approach: pre-writing → multi-draft → content-first feedback → revise', 'Pre-writing (brainstorm / outline) loosens the accuracy fixation', 'Content and organisation feedback first; grammar deferred to a later draft', 'Assess with a rubric weighting content + organisation, across drafts'],
+    spine: { shape: 'flow', layout: 'stack', start: 'problem', end: 'outcome',
+      lead: 'Cognitive Perspective and Process Approach',
+      nodes: [
+        'Saudi eye learners have strong grammar but treat writing as a hunt for accuracy, not composition',
+        'Start with pre-writing: brainstorm or outline, and have students name purpose and audience',
+        'Run a multi-draft cycle, responding to content and organisation first and deferring grammar',
+        'Teach composing strategies directly: goal-setting, audience awareness, planning and monitoring',
+        'Students treat accuracy as one late stage; assess with a rubric weighting content across drafts'
+      ] },
     core: [
       { type: 'prose', html: '<strong>Problem + evidence.</strong> Saudi “eye” learners arrive from a public-school diet of reading and grammar, so they have explicit grammar knowledge but treat writing as a hunt for <strong>grammatical accuracy</strong> rather than effective composition. The cognitive perspective and the process approach together move that focus.' },
       { type: 'steps', items: [
@@ -188,7 +239,15 @@ EXAM.addQuestions([
     section: 'application',
     operator: 'apply',
     prompt: 'Cultural & Linguistic Analysis: Plagiarism and "Intertextuality" in Saudi Higher Ed. Many Saudi students struggle with "plagiarism," often because they lack the "linguistic resources" to paraphrase correctly or view "copying" as a legitimate strategy for honoring expert voices. Using the concepts of "Intertextuality" and "Scaffolding," propose a pedagogical alternative to a "punitive" plagiarism policy.',
-    spine: ['Reframe: copying is developmental + linguistic, not (only) a moral failing', 'Intertextuality: all writing builds on prior texts via implicit community conventions', 'beginners lack the discourse-community experience → struggle to paraphrase', 'Scaffolding: limited-proficiency writers lean on source language while it grows', 'Teach paraphrase / citation strategies + sentence frames; drop the punitive frame', 'Assess source use formatively, across drafts'],
+    spine: { shape: 'flow', layout: 'stack', start: 'problem', end: 'outcome',
+      lead: 'Intertextuality and Scaffolding',
+      nodes: [
+        'Saudi students copy because they lack the language to paraphrase or see reuse as honouring experts',
+        'Reframe copying through intertextuality: a developmental, linguistic stage, not a moral failure',
+        'Scaffold the linguistic resources: sentence frames, paraphrase strategies, and models of citing sources',
+        'Make the discipline citation conventions explicit and teach source use in stages',
+        'Students incorporate sources as developing members; assess paraphrasing formatively across drafts'
+      ] },
     core: [
       { type: 'prose', html: '<strong>Reframe the problem.</strong> Through the lens of <strong>intertextuality</strong>, all writing reuses and builds on pre-existing texts through conventions that are implicit and known only within a discourse community. Saudi students who copy often lack the linguistic resources to paraphrase, or come from a tradition in which reusing an expert’s words honours them. Their copying is a <strong>developmental and linguistic</strong> stage of joining the community, not a moral failure, and teachers should avoid framing it as one.' },
       { type: 'steps', items: [

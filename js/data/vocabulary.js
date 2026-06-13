@@ -25,7 +25,13 @@ EXAM.addQuestions([
     section: 'define',
     term: 'The Four Strands',
     prompt: 'The Four Strands:',
-    spine: ['Nation’s framework for a balanced course', '1 Meaning-focused INPUT (listen / read for meaning)', '2 Meaning-focused OUTPUT (speak / write for meaning)', '3 Language-focused LEARNING (deliberate study: word parts, cards)', '4 FLUENCY development (faster use of known words)', 'Balance of meaning + form; roughly equal time'],
+    spine: { shape: 'map', center: 'Nation: four strands', payoff: 'A balanced course gives each strand roughly equal time, balancing meaning and form.',
+      spokes: [
+        { label: 'Meaning-focused input', text: 'picking up words while listening or reading for meaning' },
+        { label: 'Meaning-focused output', text: 'picking up words while speaking or writing for meaning' },
+        { label: 'Language-focused learning', text: 'deliberate study of items such as word parts and word cards' },
+        { label: 'Fluency development', text: 'getting faster at using words already known' },
+      ] },
     core: [
       { type: 'def', html: 'The <strong>four strands</strong> are Nation’s framework for a balanced language course: (1) <strong>meaning-focused input</strong>, (2) <strong>meaning-focused output</strong>, (3) <strong>language-focused learning</strong>, and (4) <strong>fluency development</strong> — each given roughly equal time.' },
       { type: 'prose', html: 'The strands balance <strong>meaning and form</strong>. Two are meaning-focused (picking up vocabulary while reading/listening, and while speaking/writing); one is the <strong>deliberate</strong>, language-focused study of items (e.g. word parts, word cards); and one builds <strong>fluency</strong> in using words already known. The point is variety — learners need chances to meet words, to produce them, and to focus on both form and meaning.' },
@@ -40,7 +46,12 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Keyword Technique',
     prompt: 'Keyword Technique:',
-    spine: ['GUIDE ANOMALY: not defined in Ch 19 (Zimmerman)', 'A mnemonic word-learning strategy (Nation’s strategy literature)', '1 L1 "keyword" that SOUNDS like part of the L2 word', '2 vivid mental IMAGE linking keyword + meaning', 'e.g. Spanish "mesa" → "mess" → image of a messy table'],
+    spine: { shape: 'list', items: [
+      'A mnemonic strategy for learning a word meaning in two steps.',
+      'First, find a first-language keyword that sounds like part of the target word.',
+      'Then form a vivid mental image linking that keyword to the target word meaning.',
+      'For Spanish "mesa" (table), pick the keyword "mess" and picture a table covered in a mess.',
+    ] },
     core: [
       { type: 'flag', html: '<strong>Term not defined in the assigned chapter.</strong> The keyword technique is not described in Zimmerman’s Ch 19; it belongs to the word-learning-strategy literature (Nation). The definition below is the standard one — study it, but know it is an orphan term.' },
       { type: 'def', html: 'The <strong>keyword technique</strong> is a <strong>mnemonic strategy</strong> for learning a word’s meaning in two steps: find a first-language <strong>“keyword” that sounds like</strong> part of the target word, then form a <strong>vivid mental image</strong> linking that keyword to the target word’s meaning.' },
@@ -56,7 +67,13 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Fluency Development',
     prompt: 'Fluency Development:',
-    spine: ['Nation’s 4th strand', 'Get FASTER at using words already known — no new words', 'Easy / high-frequency, meaning-focused material', 'All four skills, often under time pressure + repetition', 'Practised at "discourse / fluency level" (content-rich segments)'],
+    spine: { shape: 'map', center: 'Fluency development: Nation fourth strand', payoff: 'The job is speed of access, not breadth: the words are already known.',
+      spokes: [
+        { label: 'Goal', text: 'become faster and more confident with words already known, adding none' },
+        { label: 'Material', text: 'easy, familiar, high-frequency content that stays meaning-focused' },
+        { label: 'Conditions', text: 'all four skills, typically under time pressure with repetition' },
+        { label: 'Level of practice', text: 'the discourse or fluency level, using longer content-rich segments' },
+      ] },
     core: [
       { type: 'def', html: '<strong>Fluency development</strong> is the strand of Nation’s four strands in which learners become <strong>faster and more confident at using language they already know</strong> — adding no new vocabulary, but increasing the speed and ease of access.' },
       { type: 'prose', html: 'It uses <strong>easy, familiar (high-frequency)</strong> material, stays <strong>meaning-focused</strong>, and runs across all four skills, typically with <strong>time pressure and repetition</strong>. In the chapter it is the <em>discourse / fluency level</em> of practice, where words are used in longer, content-rich segments with attention to fluency alongside accuracy.' },
@@ -75,7 +92,10 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'explain',
     prompt: 'Explain the distinction between "high-frequency" and "low-frequency" words and the pedagogical implications for each.',
-    spine: ['High-frequency = the most frequent words; GSL = 2,000 families', '→ ≥80% of writing, 90% of speech: huge coverage', 'Implication: TEACH directly — worth class time', 'Low-frequency = the long tail; individually rare, too many to teach', 'Implication: teach STRATEGIES (context, word parts, dictionary)', 'AWL (≈570 families) = special high-frequency for academic study'],
+    spine: { shape: 'contrast', rel: 'vs',
+      a: { label: 'High-frequency', text: 'the 2,000 most-frequent families that cover most text, so teach them directly' },
+      b: { label: 'Low-frequency', text: 'the rare long tail, too many to teach, so train word-learning strategies' },
+      bridge: 'The Academic Word List of about 570 families sits between them: high-frequency within academic texts, so worth teaching directly for university-bound learners.' },
     core: [
       { type: 'distinction',
         left:  { label: 'HIGH-FREQUENCY', html: 'These are the small set of <strong>most-frequent</strong> words. The General Service List is the <strong>2,000 word families</strong> that make up at least <strong>80% of written texts and 90% of conversation</strong>. “The most important words in any language are those that are most frequent.”' },
@@ -97,7 +117,10 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'compare',
     prompt: 'Compare and contrast "Meaning-focused Input" and "Meaning-focused Output" in the context of vocabulary acquisition.',
-    spine: ['Both = meaning-focused strands (attention on the message → incidental)', 'INPUT: pick up words via listening / reading (receptive)', 'needs ~98% coverage; "beginner’s paradox"; reading drives growth', 'OUTPUT: learn via speaking / writing (productive)', 'words USED in interaction get acquired (Newton 1995); worksheet-only didn’t', 'Output forces deeper processing → better retention'],
+    spine: { shape: 'contrast', rel: 'vs',
+      a: { label: 'Meaning-focused input', text: 'receptive: picking words up while listening or reading, needing about 98 percent coverage' },
+      b: { label: 'Meaning-focused output', text: 'productive: learning words through speaking and writing, which drives deeper processing' },
+      bridge: 'Both keep attention on the message, so learning is incidental; they are complementary, as input supplies exposure and output consolidates the words learners can actually use.' },
     core: [
       { type: 'distinction',
         left:  { label: 'MEANING-FOCUSED INPUT', html: 'This means learning words <strong>incidentally while listening or reading</strong> for meaning (receptive). Much vocabulary growth comes from reading, but it requires knowing ~<strong>98%</strong> of the running words — the <strong>“beginner’s paradox”</strong>: you must read to learn words, yet need words to read.' },
@@ -118,7 +141,10 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'justify',
     prompt: 'Justify the use of "Deliberate Vocabulary Learning" (e.g., word cards) over purely "Incidental Learning."',
-    spine: ['Incidental alone is slow + uncertain', 'needs ~98% coverage + 10+ encounters per word; "beginner’s paradox"', 'some features missed when attention is on meaning → need explicit study', 'Word cards: efficient, retrieval practice, spaced repetition, learner-paced', 'link form ↔ meaning; receptive → productive', 'Deliberate COMPLEMENTS (doesn’t replace) incidental learning'],
+    spine: { shape: 'contrast', rel: 'vs',
+      a: { label: 'Purely incidental', text: 'slow and uncertain: needs about 98 percent coverage and ten or more encounters, and misses some features' },
+      b: { label: 'Deliberate word cards', text: 'efficient and learner-paced, using retrieval and spaced repetition to build from receptive to productive' },
+      bridge: 'This does not replace incidental learning, which stays essential; the deliberate language-focused strand works alongside it so high-frequency words are actually learned.' },
     core: [
       { type: 'prose', html: 'A <strong>purely incidental</strong> approach is slow and leaves too much to chance: learners need to know about <strong>98%</strong> of a text’s words to pick up the rest, and a single word takes <strong>many encounters</strong> — ten or more just for gains, more for full knowledge. Some features (meaning, register, constraints on use) are <strong>missed entirely</strong> when attention is on the message, so they need deliberate attention.' },
       { type: 'steps', items: [
@@ -139,7 +165,15 @@ EXAM.addQuestions([
     section: 'application',
     operator: 'design',
     prompt: 'Contextual Application: K-12 Public Schools in Saudi Arabia. Many Saudi 7th-grade students have a limited vocabulary and rely on rote memorization of word lists provided in textbooks. Drawing on Nation\'s "Fluency Development" strand, propose a lesson intervention that uses "high-frequency" words to improve oral production speed.',
-    spine: ['Problem: rote lists = receptive knowledge, no speaking SPEED', 'Fluency strand: faster use of KNOWN high-frequency words; no new words', 'Familiar topic + GSL-level words only', 'Repeated timed retelling: 4 → 3 → 2 min, new partner each time', 'Meaning-focused; errors not corrected mid-task', 'Assess by speed / amount said, not new-word count'],
+    spine: { shape: 'flow', layout: 'stack', start: 'problem', end: 'outcome',
+      lead: 'Nation: fluency development',
+      nodes: [
+        'Rote textbook lists build receptive knowledge but no speaking speed, so students cannot retrieve words fast enough to talk.',
+        'Restrict the lesson to a familiar topic and only high-frequency words the students already know.',
+        'Run repeated timed retelling, the four-three-two technique: the same short talk to three partners in shrinking time.',
+        'Keep it meaning-focused and low-stress: listeners react to content and the teacher does not correct errors mid-task.',
+        'Students produce known words noticeably faster, assessed by how much they say in the time, not by new words.',
+      ] },
     core: [
       { type: 'prose', html: '<strong>Problem + evidence.</strong> Memorising textbook word lists builds some <em>receptive</em> knowledge but no <strong>speed</strong>: students cannot retrieve the words fast enough to speak. Nation’s <strong>fluency-development</strong> strand targets exactly this — getting faster at using words <em>already known</em>, adding no new vocabulary.' },
       { type: 'steps', items: [
@@ -158,7 +192,15 @@ EXAM.addQuestions([
     section: 'application',
     operator: 'apply',
     prompt: 'Cultural & Linguistic Analysis: Transitioning to Saudi University IEPs. Saudi university students entering Intensive English Programs (IEPs) often struggle with the "academic vocabulary" required for science and business. How can "Language-focused Learning" (word parts) be leveraged to help these Arabic L1 learners decode complex English academic terms?',
-    spine: ['Problem: IEP science/business academic vocab too complex to memorize', 'Language-focused learning = deliberate study of word parts', 'Word family = base + inflections + derivatives; AWL ≈570 families', 'Teach high-value prefixes / roots / suffixes drawn from the AWL', 'Decompose + build families (4-column chart); apply to authentic text', 'L1 leverage: Arabic root-and-pattern morphology → roots feel familiar'],
+    spine: { shape: 'flow', layout: 'stack', start: 'problem', end: 'outcome',
+      lead: 'Nation: language-focused learning',
+      nodes: [
+        'Academic science and business terms are too many and too complex to memorise as whole words.',
+        'Teach high-value academic prefixes, roots, and suffixes drawn from the Academic Word List of about 570 families.',
+        'Decompose words and build families with a four-column part-of-speech chart, marking gaps with an X.',
+        'Apply the strategy to authentic academic text, inferring meaning from parts then confirming in a dictionary.',
+        'Arabic L1 learners gain an edge because root-and-pattern morphology makes root analysis familiar; assess by decoding unseen AWL words.',
+      ] },
     core: [
       { type: 'prose', html: '<strong>Problem + evidence.</strong> Academic terms in science and business are too numerous and too complex to memorise as whole words. Nation’s <strong>language-focused</strong> strand — deliberate study of <strong>word parts</strong> — lets learners <em>decode</em> them instead, by breaking a long word into known prefixes, roots, and suffixes.' },
       { type: 'steps', items: [

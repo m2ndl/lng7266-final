@@ -18,7 +18,14 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Active Listener',
     prompt: 'Active Listener:',
-    spine: ['Listening ≠ hearing', 'Constructs meaning from incomplete input', 'Recognises gaps → asks for info', 'Builds meaning at every level + context'],
+    spine: { shape: 'map', center: 'Active listener',
+      payoff: 'Meaning is built by the listener, not extracted from the signal.',
+      spokes: [
+        { label: 'Not just hearing', text: 'listening is active meaning-construction, not passive reception of sound' },
+        { label: 'Works from incomplete input', text: 'builds a reasonable interpretation even when the signal is underspecified' },
+        { label: 'Notices the gaps', text: 'recognises when more specific information is needed and asks for it' },
+        { label: 'Builds at every level', text: 'draws on sounds, grammar, lexis and discourse, and on the context' },
+      ] },
     core: [
       { type: 'def', html: 'An <strong>active listener</strong> constructs reasonable interpretations from <strong>underspecified (incomplete) input</strong>, recognises when more specific information is needed, and asks for it.' },
       { type: 'prose', html: 'The key idea: <em>listening is not just hearing</em>. It is active meaning-construction that can begin before the first sound and continue after the input stops — meaning is <strong>built</strong> at every level of text (sounds, grammar, lexis, discourse) and context (topic, participants, purpose, setting), not extracted from the signal.' },
@@ -33,7 +40,14 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Listening Strategies',
     prompt: 'Listening Strategies:',
-    spine: ['Planned + consciously adopted', 'Improve comprehension / cope with difficulty', 'vs skills (automatic, effortless)', 'Metacognitive: plan · monitor · evaluate'],
+    spine: { shape: 'map', center: 'Listening strategies',
+      payoff: 'Practised enough, a strategy can harden into an automatic skill.',
+      spokes: [
+        { label: 'Planned and conscious', text: 'deliberately chosen ways of listening, not automatic habits' },
+        { label: 'Their purpose', text: 'to improve comprehension and cope with difficulty' },
+        { label: 'Unlike skills', text: 'skills run automatically and effortlessly; strategies take conscious effort' },
+        { label: 'Often metacognitive', children: ['plan before listening', 'monitor while listening', 'evaluate afterwards'] },
+      ] },
     core: [
       { type: 'def', html: '<strong>Listening strategies</strong> are <strong>planned, consciously adopted</strong> ways of listening — used to improve comprehension and to cope with difficulties.' },
       { type: 'prose', html: 'They contrast with listening <em>skills</em>, which are automatic and effortless. The strategies that direct attention and coordinate processing are <strong>metacognitive</strong> — planning, monitoring, and evaluation — and can be used before, during, or after listening. With practice, a strategy can become an automatic skill.' },
@@ -48,7 +62,12 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Listening Skills',
     prompt: 'Listening Skills:',
-    spine: ['GUIDE ANOMALY: 3rd bullet blank', 'Best fit: Listening Skills (pairs w/ Short Note 2)', 'Acquired · automatic · effortless', 'Fallback term: Metacognition'],
+    spine: { shape: 'list', items: [
+      'Listening skills are acquired abilities that let you listen with little deliberate effort.',
+      'They are built by practising an action until it runs on its own, such as decoding sounds or parsing grammar.',
+      'That makes skills the effortless counterpart to strategies, which stay deliberate and planned.',
+      'On the alternative reading, the intended term is metacognition: planning, monitoring and evaluating your own listening.',
+    ] },
     core: [
       { type: 'flag', html: '<strong>Guide anomaly.</strong> The third “Define” bullet for this chapter is <em>blank</em> — preserved here, not invented. The best-supported candidate is <strong>Listening Skills</strong> (it pairs with Short Note 2); the fallback is <strong>Metacognition</strong>. Both are defined so you are covered.' },
       { type: 'def', html: '<strong>Listening skills</strong>: acquired abilities that let a person listen with little deliberate effort — the result of actions practised frequently until they become <strong>automatic</strong> (e.g. decoding for perception and parsing).' },
@@ -66,7 +85,13 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'identify',
     prompt: 'Identify and define the three recurrent and overlapping phases of cognitive processing in L2 listening as proposed by Anderson (1995).',
-    spine: ['Anderson (1995)', '1 Perception — sound → known word (decode)', '2 Parsing — words into units via grammar/lexis', '3 Utilization — link to prior knowledge → meaning', 'Recurrent + overlapping, not linear'],
+    spine: { shape: 'flow', lead: 'Anderson (1995)',
+      nodes: [
+        'Perception: match heard sounds to known words',
+        'Parsing: group those words into grammatical units',
+        'Utilization: link them to prior knowledge for meaning',
+      ],
+      note: 'The three phases recur and overlap; they are not a one-way pipeline.' },
     core: [
       { type: 'prose', html: 'Anderson’s (1995) model describes three <strong>recurrent and overlapping</strong> phases of cognitive processing in listening:' },
       { type: 'steps', items: [
@@ -87,7 +112,10 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'explain',
     prompt: 'Explain the distinction between "listening skills" and "listening strategies" as described in the chapter.',
-    spine: ['Skills = acquired, automatic, effortless', 'Strategies = planned, conscious, to cope', 'Strategies → skills over time', 'Learners move between the two'],
+    spine: { shape: 'contrast', rel: 'vs',
+      a: { label: 'Skills', text: 'acquired abilities that run automatically and effortlessly' },
+      b: { label: 'Strategies', text: 'planned, conscious ways of listening chosen to cope with difficulty' },
+      bridge: 'A strategy can harden into an automatic skill over time, and listeners move between the two as the text gets harder.' },
     core: [
       { type: 'distinction',
         left:  { label: 'Listening SKILLS', html: 'Acquired abilities that let a person listen <strong>with little deliberate effort or conscious planning</strong> — the result of actions practised frequently until they become <strong>automatic</strong> (e.g. decoding for perception and parsing).' },
@@ -106,7 +134,10 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'compare',
     prompt: 'Compare and contrast "one-way" and "two-way" listening tasks, providing an example of each.',
-    spine: ['One-way = nonparticipatory, monologic', 'No immediate response (lecture, radio)', 'Two-way = participatory, dialogic', 'Alternate roles, respond + clarify', 'Conversations vs encounters'],
+    spine: { shape: 'contrast', rel: 'vs',
+      a: { label: 'One-way', text: 'nonparticipatory and monologic: you take meaning from a lecture or broadcast with no immediate response' },
+      b: { label: 'Two-way', text: 'participatory and dialogic: you alternate roles, respond and ask for clarification' },
+      bridge: 'Two-way talk splits further into conversations (interpersonal) and encounters (transactional).' },
     core: [
       { type: 'distinction',
         left:  { label: 'ONE-WAY (nonparticipatory)', html: 'Obtain information from the text with <strong>minimal or no interaction</strong> with the speaker; understand meaning <strong>without an immediate response</strong>. The text is <em>monologic</em> (recorded or read aloud). Outcomes: notes, summaries, diagrams.' },
@@ -127,7 +158,15 @@ EXAM.addQuestions([
     section: 'application',
     operator: 'design',
     prompt: 'Contextual Application: K-12 Public Schools in Saudi Arabia. In many Saudi K-12 public schools, students often rely on "routine listening plans" where they listen to a recording multiple times until the "sentences clear" [9]. Drawing on the "metacognitive pedagogical sequence" (Vandergrift, 2004), design a lesson intervention for 10th-grade students that moves away from this "product-oriented" approach toward a "process-oriented" one.',
-    spine: ['Problem: replay-till-clear = product', 'Vandergrift (2004): 4 processes, listen ×3', 'Plan/predict → Listen×3 + verify → Evaluate', 'Outcome: control of process, not just answers'],
+    spine: { shape: 'flow', layout: 'stack', start: 'problem', end: 'outcome',
+      lead: 'Vandergrift (2004): the metacognitive pedagogical sequence',
+      nodes: [
+        'Replaying a clip until it "clears" only rewards the right answer, so the hidden process of listening is never taught',
+        'Plan and predict: set a goal, share prior knowledge, and predict words and difficulties',
+        'Listen three times, verifying after each pass and comparing strategies with a partner',
+        'Evaluate and set goals in a short listening-diary entry',
+        'Learners gain control over how they comprehend, not just the correct answers',
+      ] },
     core: [
       { type: 'prose', html: '<strong>Problem + evidence.</strong> Replaying a recording until “the sentences clear” is <strong>product-oriented</strong>: only the answers matter, so the hidden <em>process</em> of listening is never taught and the learner plateaus.' },
       { type: 'theory', html: '<strong>Framework.</strong> Vandergrift’s (2004) <strong>metacognitive pedagogical sequence</strong> builds four metacognitive processes — planning, monitoring, problem-solving, evaluation — into the lesson. Learners listen <strong>three times</strong>, verifying each pass, which scaffolds the process and hands control to the learner.' },
@@ -148,7 +187,16 @@ EXAM.addQuestions([
     section: 'application',
     operator: 'apply',
     prompt: 'Cultural & Linguistic Analysis: Transitioning to EMI at Saudi Universities. Saudi students entering English-medium "foundation" or "intensive English programs" (IEPs) often face "negative expectations" regarding their "linguistic ability" in academic lectures [11]. Based on the "pedagogical model for second language listening," how can instructors use "intertextual" and "social" dimensions to support these learners?',
-    spine: ['Problem: EMI lectures → negative expectations', 'Social: two-way + cooperation (clarify together)', 'Intertextual: link lecture to known texts → schema', 'Metacognitive scaffolding (diaries)', 'Outcome: confidence + participation'],
+    spine: { shape: 'flow', start: 'problem', end: 'outcome',
+      nodes: [
+        'Students entering English-medium lectures carry negative expectations about their own ability',
+        { rank: [
+          'Social: build two-way moments and teach clarification phrases so students repair meaning together',
+          'Intertextual: tie each lecture to texts they already know, so they bring schema to the listening',
+          'Metacognitive scaffolding: model planning, monitoring and evaluation, tracked in listening diaries',
+        ] },
+        'More confidence and participation in the lecture hall',
+      ] },
     core: [
       { type: 'flag', html: '<strong>Source note.</strong> The named “pedagogical model” and the eight dimensions belong to the <strong>Academic Listening chapter (Ch 7)</strong>, which this chapter references; here we ground the <em>social</em> and <em>intertextual</em> ideas in the process model and cross-link to Ch 7 for the full framework.' },
       { type: 'prose', html: '<strong>Problem + evidence.</strong> Students entering EMI lectures carry <em>negative expectations</em> about their ability — an affective load on top of a fast academic monologue.' },

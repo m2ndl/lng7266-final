@@ -20,7 +20,14 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Literacy',
     prompt: 'Literacy:',
-    spine: ['Oral, written, AND visual skills for using text', 'In print or on a screen, to create + interpret meaning', 'Broader than reading/writing: oral support, critical reading, visual literacy', 'The "new literacy": find, evaluate, use, communicate across media', 'For various real-world and academic purposes'],
+    spine: { shape: 'map', center: 'Literacy', payoff: 'It is broader than reading and writing alone.',
+      spokes: [
+        { label: 'Skills involved', text: 'the oral, written, and visual skills used to handle text' },
+        { label: 'Medium', text: 'works with text in print or on a screen' },
+        { label: 'Purpose', text: 'creating and interpreting meaning for various purposes' },
+        { label: 'Wider reach', text: 'also includes the oral language that supports reading and writing, plus critical reading' },
+        { label: 'The new literacy', text: 'finding, evaluating, using, and communicating information across text, visual, audio, and video media' },
+      ] },
     core: [
       { type: 'def', html: '<strong>Literacy</strong> is the necessary <strong>oral, written, and visual skills</strong> involved in using text, whether in print or on a screen, to <strong>create and interpret meaning</strong> for various purposes.' },
       { type: 'prose', html: 'It is broader than reading and writing alone. It also includes the oral language that supports them, critical thinking and critical reading, and, increasingly, the “new literacy” of finding, evaluating, using, and communicating information across text, visual, audio, and video media.' },
@@ -34,7 +41,14 @@ EXAM.addQuestions([
     section: 'define',
     term: 'BICS (Basic Interpersonal Communicative Skills)',
     prompt: 'BICS (Basic Interpersonal Communicative Skills):',
-    spine: ['Informal, everyday oral language for social communication', 'Context-embedded + cognitively less demanding', 'Shared background, physical setting, faces, tone, gestures', 'Immediate feedback is available', 'Less meaning has to be carried by the words alone'],
+    spine: { shape: 'map', center: 'BICS: everyday oral language for social communication', payoff: 'It develops earlier and more easily than academic language.',
+      spokes: [
+        { label: 'Cognitive load', text: 'context-embedded and cognitively less demanding' },
+        { label: 'Shared context', text: 'speakers share background knowledge and the physical setting' },
+        { label: 'Extra cues', text: 'they read each other’s faces and tone of voice and use gestures' },
+        { label: 'Feedback', text: 'immediate feedback is available as they talk' },
+        { label: 'Why it is easier', text: 'less of the meaning has to be carried by the words themselves' },
+      ] },
     core: [
       { type: 'def', html: '<strong>BICS (Basic Interpersonal Communicative Skills)</strong> is the informal, everyday <strong>oral language</strong> used for social communication.' },
       { type: 'prose', html: 'It is context-embedded and cognitively less demanding. Speakers share background knowledge and the physical setting, read each other’s faces and tone of voice, use gestures, and get immediate feedback, so less of the meaning has to be carried by the words themselves. It develops earlier and more easily than academic language.' },
@@ -48,7 +62,13 @@ EXAM.addQuestions([
     section: 'define',
     term: 'CALP (Cognitive Academic Language Proficiency)',
     prompt: 'CALP (Cognitive Academic Language Proficiency):',
-    spine: ['The academic language needed for school', 'For discussing + critically analysing complex ideas, and for reading/writing', '"Cognitively demanding" and "context-reduced"', 'Meaning must be made explicit by language itself, not by context', 'What learners most need to develop for schooling'],
+    spine: { shape: 'map', center: 'CALP: the academic language needed for school', payoff: 'It is the language learners most need to develop in order to succeed at school.',
+      spokes: [
+        { label: 'What it is for', text: 'discussing and critically analysing complex ideas, and especially reading and writing' },
+        { label: 'Cognitive load', text: 'more cognitively demanding than everyday talk' },
+        { label: 'Context', text: 'context-reduced, with no shared setting or immediate feedback' },
+        { label: 'How meaning is carried', text: 'complex meanings must be made explicit by language itself rather than by context' },
+      ] },
     core: [
       { type: 'def', html: '<strong>CALP (Cognitive Academic Language Proficiency)</strong> is the <strong>academic language</strong> needed for school — for discussing and critically analysing complex ideas and, especially, for reading and writing.' },
       { type: 'prose', html: 'It is more <strong>cognitively demanding</strong> and <strong>context-reduced</strong> than everyday talk: without shared context or immediate feedback, the reader and writer must make complex meanings explicit “by means of language itself rather than by means of contextual support.” It is the language learners most need to develop in order to succeed at school.' },
@@ -62,7 +82,14 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Interdependence Hypothesis',
     prompt: 'Interdependence Hypothesis:',
-    spine: ['Literacy / academic skills learned in the L1 transfer to the L2', 'Because they draw on a "common underlying proficiency"', 'Learning to read/write in the L2 = developing academic language', 'L1 literacy is an asset, not a distraction', 'Time on L1 literacy is not time lost for L2 reading'],
+    spine: { shape: 'flow',
+      nodes: [
+        'Literacy and academic-language skills learned in the L1 transfer to the L2',
+        'because both draw on a common underlying proficiency',
+        'and learning to read and write in the L2 means developing that same academic language',
+        'so first-language literacy is an asset, not a distraction',
+      ],
+      note: 'Time spent on literacy in the native language is not time lost for English reading.' },
     core: [
       { type: 'def', html: 'The <strong>interdependence hypothesis</strong> holds that the literacy and academic-language skills learned in the first language <strong>transfer to the second</strong>, because they draw on a <strong>“common underlying proficiency.”</strong>' },
       { type: 'prose', html: 'Learning to read and write in the L2 means developing academic language, and the skills and knowledge built in the L1 are available to support that development. So first-language literacy is an asset rather than a distraction: time spent on literacy in the native language is not time lost with respect to English reading.' },
@@ -76,7 +103,12 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Schema Theory',
     prompt: 'Schema Theory:',
-    spine: ['Comprehension = integrating new text with prior "world" knowledge', 'Schemata = structures of knowledge about people, places, events', 'Drives the top-down side of reading (prediction, inference)', 'Meaning emerges from text + reader, not from words alone', 'Without enough world knowledge, fluent comprehension fails'],
+    spine: { shape: 'map', center: 'Schema theory: comprehension as integrating new text with prior knowledge', payoff: 'Without sufficient world knowledge, fluent comprehension cannot occur.',
+      spokes: [
+        { label: 'Schemata', text: 'existing structures of background knowledge about people, places, events, and activities' },
+        { label: 'Which side of reading', text: 'it underlies the top-down side, used to predict and infer' },
+        { label: 'Where meaning lives', text: 'meaning emerges from text and reader together, not from the words alone' },
+      ] },
     core: [
       { type: 'def', html: '<strong>Schema theory</strong> explains comprehension as the reader’s <strong>integration of new text with existing structures of background (“world”) knowledge</strong> — the schemata of people, places, events, and activities the reader already holds.' },
       { type: 'prose', html: 'It underlies the <strong>top-down</strong> side of reading: readers use what they already know to predict, infer, and build meaning, so that meaning does not reside in the words alone but emerges from the combination of the text and the reader’s knowledge. Without sufficient world knowledge, fluent comprehension cannot occur.' },
@@ -90,7 +122,12 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Interactive Model of Reading',
     prompt: 'Interactive Model of Reading:',
-    spine: ['Gives EQUAL weight to top-down and bottom-up processing', 'Three components: the text, processing strategies, the knowledge base', 'Processing = cognitive (top-down) + language (bottom-up) strategies', 'Knowledge base = world knowledge (top-down) + language knowledge (bottom-up)', 'Weakness at either end slows fluent reading'],
+    spine: { shape: 'map', center: 'Interactive model: equal weight to top-down and bottom-up processing', payoff: 'weakness at either end slows fluent reading',
+      spokes: [
+        { label: 'The text', text: 'one of the three interacting components' },
+        { label: 'Processing strategies', children: ['cognitive: top-down predicting and inferring', 'language: bottom-up letter, sound, and word recognition'] },
+        { label: 'Knowledge base', children: ['world knowledge: top-down', 'language knowledge: bottom-up'] },
+      ] },
     core: [
       { type: 'def', html: 'The <strong>interactive model of reading</strong> gives <strong>equal importance to top-down and bottom-up processing</strong>, treating reading as the interaction of three components: the text, the reader’s processing strategies, and the reader’s knowledge base.' },
       { type: 'prose', html: 'The processing strategies split into <strong>cognitive</strong> (top-down: predicting, inferring, problem-solving) and <strong>language</strong> (bottom-up: recognising letters, sounds, and words); the knowledge base splits into <strong>world knowledge</strong> (top-down) and <strong>language knowledge</strong> (bottom-up). Both the top and the bottom are essential, and weakness at either end slows fluent reading.' },
@@ -104,7 +141,14 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Reading Engagement',
     prompt: 'Reading Engagement:',
-    spine: ['Five characteristics of an engaged reader', '1 reads widely, for different purposes', '2 reads fluently; 3 comprehends by DOING something with the text', '4 is metacognitively aware, using a variety of strategies', '5 is motivated; the five overlap and reinforce each other'],
+    spine: { shape: 'map', center: 'Engaged reader', payoff: 'the five overlap and reinforce each other',
+      spokes: [
+        { label: 'Reads widely', text: 'reads a lot, for different purposes' },
+        { label: 'Reads fluently', text: 'reads smoothly enough to free attention for meaning' },
+        { label: 'Comprehends actively', text: 'understands by doing something with what is read' },
+        { label: 'Metacognitively aware', text: 'monitors reading using a variety of strategies' },
+        { label: 'Motivated', text: 'is motivated, which sustains the effort' },
+      ] },
     core: [
       { type: 'def', html: 'An <strong>engaged reader</strong> is defined by <strong>five characteristics</strong>: reading widely for different purposes, reading fluently, comprehending by doing something with what is read, being metacognitively aware in using a variety of strategies, and being motivated.' },
       { type: 'prose', html: 'These five overlap and reinforce one another: purpose directs strategy choice, fluency frees attention for meaning, and motivation sustains the effort. Engagement is therefore the <strong>synergy of all five</strong> rather than any one in isolation.' },
@@ -118,7 +162,15 @@ EXAM.addQuestions([
     section: 'define',
     term: 'Metacognition',
     prompt: 'Metacognition:',
-    spine: ['Conscious awareness of, and control over, one’s own reading/learning', 'The ability to step back and reflect on one’s thinking', 'Plan → decide when to use a strategy → monitor → combine → evaluate', 'Without it, learners read "without direction"', 'Central to becoming a self-directed, independent reader'],
+    spine: { shape: 'flow', lead: 'Metacognition: conscious awareness of and control over one’s own reading, stepping back to reflect on one’s thinking',
+      nodes: [
+        'Prepare and plan the reading',
+        'decide when to use a particular strategy',
+        'monitor how that strategy is working',
+        'combine strategies as needed',
+        'evaluate how effective they were',
+      ],
+      note: 'Without it, learners read “without direction”; with it, they become self-directed, independent readers.' },
     core: [
       { type: 'def', html: '<strong>Metacognition</strong> is the reader’s <strong>conscious awareness of, and control over, their own reading and learning</strong> — the ability to step back and reflect on one’s own thinking.' },
       { type: 'prose', html: 'Applied to reading strategies, it involves preparing and planning, deciding when to use a strategy, monitoring its use, combining strategies, and evaluating their effectiveness. Without it, learners read “without direction,” unable to plan, monitor, or review their progress.' },
@@ -134,7 +186,13 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'identify',
     prompt: 'Identify and define the three broad stages of L2 literacy development for school-age learners.',
-    spine: ['1 Beginning — "learning to read": decoding, conventions, narrative texts', '2 Developing — the transition: fluency + comprehension; the "intermediate slump"', '3 Reading to learn — gaining knowledge from expository/academic texts', 'The key shift: from "learning to read" to "reading to learn"', 'The end goal is the independent reader'],
+    spine: { shape: 'flow', layout: 'stack',
+      nodes: [
+        'Beginning (learning to read): mastering decoding and print conventions on simple narrative texts',
+        'Developing (the transition): consolidating fluency and comprehension, where many stall in the intermediate slump',
+        'Reading to learn: gaining new knowledge from expository and academic texts as an independent reader',
+      ],
+      note: 'The key shift is from “learning to read” to “reading to learn,” and the goal is the independent reader.' },
     core: [
       { type: 'prose', html: 'For school-age learners, L2 literacy develops broadly through three stages, moving from cracking the code to using reading to gain knowledge. The stages overlap rather than switch cleanly, but each marks a distinct shift in what the reader can do.' },
       { type: 'steps', items: [
@@ -153,7 +211,14 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'explain',
     prompt: 'Explain the role of "motivation" in fostering an engaged second language reader.',
-    spine: ['Motivation is one of the 5 characteristics — and the one that sustains the rest', 'Without it, even able learners do not persist', 'Formula: motivation = expectation of reward ÷ effort required', 'Teacher’s job: raise the reward, lower the effort', 'Shared responsibility: teacher interventions + learner self-regulation'],
+    spine: { shape: 'flow', layout: 'stack', lead: 'Motivation is one of the five characteristics of an engaged reader, and the one that sustains the rest',
+      nodes: [
+        'Without it even able learners will not persist',
+        'Motivation works out as the expected reward over the effort required',
+        'so the teacher’s job is to raise the expectation of reward while lowering the effort',
+        'lowering effort by matching texts to level and giving a clear reading purpose',
+      ],
+      note: 'It is a shared responsibility: teacher interventions plus the learner’s own self-regulation.' },
     core: [
       { type: 'prose', html: 'Motivation is one of the five characteristics of an engaged reader and the one that sustains the rest. Without it, even able learners will not persist; with it, learners can reach a working knowledge of the L2 regardless of aptitude.' },
       { type: 'steps', items: [
@@ -172,7 +237,10 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'compare',
     prompt: 'Compare and contrast "Intensive" and "Extensive" reading in the L2 curriculum.',
-    spine: ['INTENSIVE = small chunks, explicit purpose: learn a new skill or new vocabulary', 'covers phoneme-grapheme (bottom-up), vocabulary, strategy/metacognition, fluency', 'EXTENSIVE = reading larger amounts of level-appropriate text', 'builds fluency, vocabulary, and the reading habit', 'A balanced curriculum LINKS the two'],
+    spine: { shape: 'contrast', rel: 'vs',
+      a: { label: 'Intensive', text: 'reading small chunks of text to learn a new skill or new vocabulary, covering phoneme-grapheme work, vocabulary, strategy and metacognition, and fluency' },
+      b: { label: 'Extensive', text: 'reading larger amounts of level-appropriate text to build fluency, vocabulary, and the reading habit' },
+      bridge: 'A balanced curriculum links the two: a strategy practised intensively is then used in extensive reading.' },
     core: [
       { type: 'distinction',
         left:  { label: 'INTENSIVE READING', html: 'Reading <strong>small chunks of text</strong> with the explicit purpose of learning a new reading skill or new vocabulary. It includes work on phoneme-grapheme correspondences (the bottom-up side), vocabulary, strategy and metacognitive instruction, and reading fluency.' },
@@ -193,7 +261,12 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'justify',
     prompt: 'Justify the inclusion of metacognitive strategy instruction for L2 readers.',
-    spine: ['The most effective learners are the metacognitively aware ones', 'Without it, learners read "without direction" (no plan/monitor/review)', 'Makes the hidden process of comprehension visible', '"Comprehension shouldn’t be silent" — what is visible can be improved', 'Builds self-directed, independent readers'],
+    spine: { shape: 'map', center: 'Include metacognitive strategy instruction: the most effective learners are the metacognitively aware ones', payoff: 'For struggling intermediate readers it lets them name the learning challenge and pick the strategy to solve it.',
+      spokes: [
+        { label: 'Gives direction and control', text: 'without it learners read “without direction,” unable to plan, monitor, or review' },
+        { label: 'Makes comprehension visible', text: 'think-alouds surface hidden strategies, and what is visible can be improved' },
+        { label: 'Builds independence', text: 'aware readers become self-directed and take responsibility for their own learning' },
+      ] },
     core: [
       { type: 'prose', html: 'Metacognitive strategy instruction is justified because the most effective language learners are precisely those who are <strong>metacognitively aware</strong> — who plan, monitor, and evaluate their own reading.' },
       { type: 'steps', items: [
@@ -212,7 +285,12 @@ EXAM.addQuestions([
     section: 'short_note',
     operator: 'synthesize',
     prompt: 'Synthesize how "Schema Theory" and "Bottom-up Processing" interact in the reading process.',
-    spine: ['Reading is interactive: bottom-up and top-down (schema) at the same time', 'BOTTOM-UP supplies the code: letters → sounds → words → phrases', 'SCHEMA supplies the knowledge: predict, infer, interpret from world knowledge', 'Meaning emerges from text + reader (knowing every word ≠ understanding)', 'Weakness at either end slows fluent reading'],
+    spine: { shape: 'flow', lead: 'Reading is interactive: bottom-up and schema (top-down) work at the same time',
+      nodes: [
+        { rank: ['Bottom-up supplies the code: letters to sounds to words to phrases', 'Schema supplies the knowledge: predicting and inferring from world knowledge'] },
+        'Meaning emerges from text and reader together, since knowing every word does not guarantee understanding',
+      ],
+      note: 'Weakness at either end, in decoding or in world knowledge, stalls comprehension.' },
     core: [
       { type: 'prose', html: 'Reading is <strong>interactive</strong>: it draws on bottom-up processing and on schema (top-down) processing at the same time, and fluent comprehension depends on both working together.' },
       { type: 'steps', items: [
@@ -233,7 +311,14 @@ EXAM.addQuestions([
     section: 'application',
     operator: 'design',
     prompt: 'Contextual Application: K-12 Literacy in Saudi Public Schools. Many Saudi K-12 students struggle with "reading to learn" in late elementary and middle school because their English instruction has focused almost exclusively on "beginning-level decoding" [7]. Design a "scaffolded" lesson for a 7th-grade science-themed English text that moves them toward the "developing" stage of literacy.',
-    spine: ['Problem: stuck at decoding; can read words but cannot "read to learn" expository text', 'Move toward the developing stage by adding comprehension + academic-language support', 'Pre-teach key science vocabulary + activate schema (world knowledge)', 'Scaffold with sentence starters; model predicting/questioning/visualising/summarising', 'Re-read the text for main-idea-vs-detail + a graphic organiser, then write about it', 'Assess comprehension (organiser + summary), not word-perfect decoding'],
+    spine: { shape: 'flow', layout: 'stack', start: 'problem', end: 'outcome',
+      nodes: [
+        'Saudi 7th-graders stalled at decoding can read the words but cannot yet read to learn from an expository science text',
+        'Pre-teach a small set of key science words deeply and activate what students already know about the topic',
+        'Scaffold comprehension with sentence starters while modelling predicting, questioning, visualising, and summarising',
+        'Re-read the same passage to separate main ideas from details and complete a graphic organiser, then connect it to writing',
+        'Students extract and discuss meaning, assessed by the organiser and a short summary rather than word-perfect reading',
+      ] },
     core: [
       { type: 'prose', html: '<strong>Problem + evidence.</strong> Saudi 7th-graders stalled at beginning-level decoding can read the words but cannot yet <strong>read to learn</strong> from an expository science text. A scaffolded lesson moves them toward the developing stage by adding comprehension and academic-language support on top of their decoding.' },
       { type: 'steps', items: [
@@ -252,7 +337,13 @@ EXAM.addQuestions([
     section: 'application',
     operator: 'apply',
     prompt: 'Cultural & Linguistic Analysis: Arabic L1 to English L2 Orthographic Transfer. Considering that Arabic (the L1 of Saudi learners) is a "semitic language" with a "right-to-left" orientation and a "different script," what specific "bottom-up" and "top-down" challenges might a Saudi "beginning" reader face, and how should a PhD-level curriculum address them?',
-    spine: ['Arabic vs English differ in script, direction, and orthographic depth', 'Challenges hit BOTH ends of the interactive model', 'Bottom-up: new script + left-to-right + less transparent sound-spelling; new brain activation patterns', 'Top-down: gaps in genre conventions + cultural/background knowledge (schema)', 'Curriculum: explicit letter-to-sound + onsets/rimes + easy reading for automaticity; build world knowledge; allow a long timeline', 'Assess decoding automaticity and comprehension separately'],
+    spine: { shape: 'flow', layout: 'stack', start: 'problem', end: 'outcome',
+      nodes: [
+        'Arabic and English differ in script, direction, and orthographic depth, so challenges hit both ends of the interactive model',
+        { rank: ['Bottom-up: a new script, left-to-right direction, and less transparent sound-spelling, requiring new brain activation patterns', 'Top-down: gaps in genre conventions and in the cultural and background knowledge that schemata supply'] },
+        'Teach English letter-to-sound conversions and onsets and rimes with ample easy reading for automaticity, build world knowledge, and allow a long timeline',
+        'Treat the transition as a lengthy dual-track process and assess decoding automaticity and comprehension separately',
+      ] },
     core: [
       { type: 'prose', html: '<strong>Analysis.</strong> Arabic and English differ in script, direction, and orthographic depth, so a Saudi beginning reader faces challenges at <strong>both ends</strong> of the interactive model — in bottom-up decoding and in the top-down knowledge that supports it.' },
       { type: 'steps', items: [
